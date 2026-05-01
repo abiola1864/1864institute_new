@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Research — The 1864 Research &amp; Innovation Institute</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<style>
+:root{
+  --navy:#1a2744;--navy2:#111c33;--gold:#c9a84c;--gold2:#a8873a;
+  --cream:#fafaf7;--stone:#f2f0ea;--muted:#6b6b6b;--ink:#1a1a1a;--white:#ffffff;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;background:var(--cream);color:var(--ink);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+a{text-decoration:none;color:inherit}
+img{display:block;max-width:100%}
+.wrap{max-width:1200px;margin-inline:auto;padding-inline:clamp(24px,5vw,72px)}
+.rv{opacity:0;transform:translateY(20px);transition:opacity .7s ease,transform .7s ease}
+.rv.in{opacity:1;transform:none}
+@keyframes drift{from{transform:scale(1.03)}to{transform:scale(1.03) translateY(-14px)}}
+</style>
+</head>
+<body>
+<nav id="nav">
+  <a href="index.html" class="nav-logo">
+    <div class="nav-logo-mark">1864</div>
+    <div class="nav-logo-text">The 1864 Research<br>&amp; Innovation Institute</div>
+  </a>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="research.html">Research</a>
+    <a href="team.html">Team</a>
+    <a href="contact.html">Contact</a>
+    <a href="contact.html" class="nav-cta">Get in touch</a>
+  </div>
+  <div id="burger" onclick="document.getElementById('mob').classList.toggle('open')">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+<div id="mob">
+  <a href="index.html">Home</a>
+  <a href="research.html">Research</a>
+  <a href="team.html">Team</a>
+  <a href="contact.html">Contact</a>
+</div>
+<style>
+#nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:center;
+  justify-content:space-between;padding:0 clamp(20px,5vw,64px);height:76px;transition:background .4s}
+#nav.sc{background:rgba(26,39,68,.97);backdrop-filter:blur(18px);box-shadow:0 1px 0 rgba(255,255,255,.06)}
+.nav-logo{display:flex;align-items:center;gap:12px}
+.nav-logo-mark{width:36px;height:36px;border:1.5px solid #c9a84c;border-radius:6px;
+  display:flex;align-items:center;justify-content:center;
+  font-family:'Cormorant Garamond',serif;font-size:1rem;font-weight:700;color:#c9a84c}
+.nav-logo-text{font-family:'Cormorant Garamond',serif;font-size:.95rem;font-weight:600;
+  color:rgba(255,255,255,.75);line-height:1.2}
+.nav-links{display:flex;align-items:center;gap:28px}
+.nav-links a{font-size:.82rem;font-weight:400;color:rgba(255,255,255,.55);transition:color .2s;letter-spacing:.01em}
+.nav-links a:hover{color:#c9a84c}
+.nav-cta{background:#c9a84c;color:#111c33!important;font-weight:600!important;
+  padding:9px 22px;border-radius:100px;font-size:.8rem!important;transition:background .2s!important}
+.nav-cta:hover{background:#a8873a!important}
+#burger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px}
+#burger span{display:block;width:22px;height:1.5px;background:rgba(255,255,255,.6)}
+#mob{display:none;flex-direction:column;position:fixed;top:76px;left:0;right:0;z-index:199;
+  background:rgba(26,39,68,.98);border-bottom:1px solid rgba(255,255,255,.06);padding:8px 0 20px}
+#mob a{display:block;padding:14px 28px;font-size:.9rem;color:rgba(255,255,255,.55);
+  border-bottom:1px solid rgba(255,255,255,.04)}
+#mob.open{display:flex!important}
+@media(max-width:860px){.nav-links{display:none}#burger{display:flex}}
+</style>
+<script>window.addEventListener('scroll',function(){document.getElementById('nav').classList.toggle('sc',scrollY>60);});document.getElementById('nav').classList.toggle('sc',scrollY>60);</script>
+
+<section style="background:#111c33;padding:clamp(120px,12vw,160px) 0 clamp(64px,8vw,96px)">
+  <div class="wrap">
+    <div style="max-width:720px">
+      <p style="font-size:.68rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:rgba(201,168,76,.7);margin-bottom:14px;display:flex;align-items:center;gap:10px"><span style="width:18px;height:1px;background:rgba(201,168,76,.7);display:inline-block"></span>2026–2028 Research Programme</p>
+      <h1 style="font-family:'Cormorant Garamond',serif;font-size:clamp(2.8rem,6vw,5rem);font-weight:300;line-height:.96;letter-spacing:-.025em;color:#ffffff;margin-bottom:22px">Our research</h1>
+      <p style="font-size:1rem;color:rgba(255,255,255,.45);line-height:1.85;max-width:520px">The 1864 Institute's first two-year research programme focuses on two areas where evidence is most urgently needed and most often missing.</p>
+    </div>
+  </div>
+</section>
+
+<section style="background:#fafaf7;padding:clamp(80px,10vw,120px) 0">
+  <div class="wrap">
+
+    <!-- Area I -->
+    <div style="display:grid;grid-template-columns:1fr 1.4fr;gap:80px;align-items:start;margin-bottom:80px;padding-bottom:80px;border-bottom:1px solid rgba(0,0,0,.08)">
+      <div class="rv">
+        <div style="background:#1a2744;border-radius:12px;padding:40px;margin-bottom:0">
+          <p style="font-size:.62rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:#c9a84c;opacity:.7;margin-bottom:10px">Research Area I</p>
+          <h2 style="font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:600;color:#ffffff;line-height:1.1;margin-bottom:20px">Crime, Violence &amp; Peace</h2>
+          <p style="font-size:.82rem;color:rgba(255,255,255,.35);line-height:1.7">Nigeria &middot; West Africa &middot; 2026–2028</p>
+        </div>
+      </div>
+      <div class="rv">
+        <p style="font-size:.68rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:#c9a84c;margin-bottom:14px;display:flex;align-items:center;gap:10px"><span style="width:18px;height:1px;background:#c9a84c;display:inline-block"></span>The case for this work</p>
+        <p style="font-size:.98rem;color:#6b6b6b;line-height:1.9;margin-bottom:20px">Nigeria faces a complex, multi-layered security environment — from urban crime to community conflict to institutional capacity gaps. Policy responses are often made with limited evidence about what works, what doesn't, and why.</p>
+        <p style="font-size:.98rem;color:#6b6b6b;line-height:1.9;margin-bottom:32px">The 1864 Institute's work in this area focuses on the institutional and systemic factors that shape how crime and violence unfold — and how justice systems, communities, and governments respond. We are particularly interested in the gap between formal security institutions and the lived experience of crime and safety at the community level.</p>
+        <div style="background:#f2f0ea;border-radius:10px;padding:28px">
+          <p style="font-size:.7rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:#1a2744;margin-bottom:14px">Research questions</p>
+          <div style="display:flex;flex-direction:column;gap:10px">
+            <div style="display:flex;gap:12px;align-items:start">
+              <div style="width:5px;height:5px;border-radius:50%;background:#c9a84c;margin-top:7px;flex-shrink:0"></div>
+              <p style="font-size:.88rem;color:#6b6b6b;line-height:1.7">What organisational and management factors shape the capacity of Nigerian security institutions to respond to crime?</p>
+            </div>
+            <div style="display:flex;gap:12px;align-items:start">
+              <div style="width:5px;height:5px;border-radius:50%;background:#c9a84c;margin-top:7px;flex-shrink:0"></div>
+              <p style="font-size:.88rem;color:#6b6b6b;line-height:1.7">How do crime complaints and incidents move across Nigeria's institutional landscape — and where do they get lost?</p>
+            </div>
+            <div style="display:flex;gap:12px;align-items:start">
+              <div style="width:5px;height:5px;border-radius:50%;background:#c9a84c;margin-top:7px;flex-shrink:0"></div>
+              <p style="font-size:.88rem;color:#6b6b6b;line-height:1.7">Under what conditions do communities sustain peace — and what enables that to be built deliberately?</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Area II -->
+    <div style="display:grid;grid-template-columns:1fr 1.4fr;gap:80px;align-items:start">
+      <div class="rv">
+        <div style="background:#1a2744;border-radius:12px;padding:40px">
+          <p style="font-size:.62rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:#c9a84c;opacity:.7;margin-bottom:10px">Research Area II</p>
+          <h2 style="font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:600;color:#ffffff;line-height:1.1;margin-bottom:20px">Gender</h2>
+          <p style="font-size:.82rem;color:rgba(255,255,255,.35);line-height:1.7">Nigeria &middot; West Africa &middot; 2026–2028</p>
+        </div>
+      </div>
+      <div class="rv">
+        <p style="font-size:.68rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:#c9a84c;margin-bottom:14px;display:flex;align-items:center;gap:10px"><span style="width:18px;height:1px;background:#c9a84c;display:inline-block"></span>The case for this work</p>
+        <p style="font-size:.98rem;color:#6b6b6b;line-height:1.9;margin-bottom:20px">Gender shapes access to resources, exposure to risk, and opportunity in ways that are often invisible to policy. In Nigeria, significant gender gaps persist across economic, political, and social domains — yet the evidence base for what drives them and what changes them remains thin.</p>
+        <p style="font-size:.98rem;color:#6b6b6b;line-height:1.9;margin-bottom:32px">The 1864 Institute's gender research focuses on generating context-specific, high-quality evidence about where gender disparities are most acute, what sustains them, and what the data tells us about interventions that have — and have not — moved the needle.</p>
+        <div style="background:#f2f0ea;border-radius:10px;padding:28px">
+          <p style="font-size:.7rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:#1a2744;margin-bottom:14px">Research questions</p>
+          <div style="display:flex;flex-direction:column;gap:10px">
+            <div style="display:flex;gap:12px;align-items:start">
+              <div style="width:5px;height:5px;border-radius:50%;background:#c9a84c;margin-top:7px;flex-shrink:0"></div>
+              <p style="font-size:.88rem;color:#6b6b6b;line-height:1.7">How do gender norms shape economic participation, firm performance, and labour market outcomes in Nigeria?</p>
+            </div>
+            <div style="display:flex;gap:12px;align-items:start">
+              <div style="width:5px;height:5px;border-radius:50%;background:#c9a84c;margin-top:7px;flex-shrink:0"></div>
+              <p style="font-size:.88rem;color:#6b6b6b;line-height:1.7">Where do gender-based disparities in access and opportunity concentrate — and what structural factors explain that concentration?</p>
+            </div>
+            <div style="display:flex;gap:12px;align-items:start">
+              <div style="width:5px;height:5px;border-radius:50%;background:#c9a84c;margin-top:7px;flex-shrink:0"></div>
+              <p style="font-size:.88rem;color:#6b6b6b;line-height:1.7">What does the evidence say about interventions that shift gender norms — and what does it take for that change to last?</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Working papers coming soon -->
+<section style="background:#f2f0ea;padding:clamp(64px,8vw,96px) 0">
+  <div class="wrap" style="text-align:center">
+    <div class="rv">
+      <p style="font-size:.68rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:#1a2744;margin-bottom:14px;display:flex;align-items:center;gap:10px"><span style="width:18px;height:1px;background:#1a2744;display:inline-block"></span>Publications</p>
+      <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(1.8rem,4vw,3rem);font-weight:300;color:#1a2744;line-height:1.1;margin-bottom:16px">Working papers coming in 2026.</h2>
+      <p style="font-size:.92rem;color:#6b6b6b;max-width:480px;margin-inline:auto;margin-bottom:32px">The Institute was established in 2026. Our first working papers and policy briefs will be published as research progresses. Sign up to be notified.</p>
+      <a href="contact.html" style="display:inline-flex;align-items:center;gap:7px;background:#1a2744;color:#ffffff;border-radius:100px;font-size:.85rem;font-weight:500;padding:13px 28px">Get notified &rarr;</a>
+    </div>
+  </div>
+</section>
+<footer style="background:#111c33;padding:clamp(48px,6vw,72px) 0 20px">
+  <div class="wrap">
+    <div style="display:grid;grid-template-columns:1.8fr 1fr 1fr;gap:48px;margin-bottom:40px">
+      <div>
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px">
+          <div style="width:32px;height:32px;border:1.5px solid #c9a84c;border-radius:5px;display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:.85rem;font-weight:700;color:#c9a84c">1864</div>
+          <span style="font-family:'Cormorant Garamond',serif;font-size:.9rem;font-weight:600;color:rgba(255,255,255,.65)">The 1864 Research &amp; Innovation Institute</span>
+        </div>
+        <p style="font-size:.78rem;color:rgba(255,255,255,.32);line-height:1.8;max-width:220px">Evidence-based research on crime, violence, peace, and gender in Nigeria and West Africa. Est. 2026.</p>
+      </div>
+      <div>
+        <h4 style="font-size:.62rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.22);margin-bottom:14px">Pages</h4>
+        <div style="display:flex;flex-direction:column;gap:9px">
+          <a href="index.html" style="font-size:.78rem;color:rgba(255,255,255,.38);transition:color .2s" onmouseover="this.style.color='#c9a84c'" onmouseout="this.style.color='rgba(255,255,255,.38)'">Home</a>
+          <a href="research.html" style="font-size:.78rem;color:rgba(255,255,255,.38);transition:color .2s" onmouseover="this.style.color='#c9a84c'" onmouseout="this.style.color='rgba(255,255,255,.38)'">Research</a>
+          <a href="team.html" style="font-size:.78rem;color:rgba(255,255,255,.38);transition:color .2s" onmouseover="this.style.color='#c9a84c'" onmouseout="this.style.color='rgba(255,255,255,.38)'">Team</a>
+          <a href="contact.html" style="font-size:.78rem;color:rgba(255,255,255,.38);transition:color .2s" onmouseover="this.style.color='#c9a84c'" onmouseout="this.style.color='rgba(255,255,255,.38)'">Contact</a>
+        </div>
+      </div>
+      <div>
+        <h4 style="font-size:.62rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.22);margin-bottom:14px">Contact</h4>
+        <p style="font-size:.78rem;color:rgba(255,255,255,.35);line-height:1.9">
+          Nigeria<br>
+          <a href="mailto:info@1864institute.org" style="color:rgba(255,255,255,.38)">info@1864institute.org</a>
+        </p>
+      </div>
+    </div>
+    <div style="border-top:1px solid rgba(255,255,255,.06);padding-top:18px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px">
+      <p style="font-size:.68rem;color:rgba(255,255,255,.18)">&copy; 2026 The 1864 Research &amp; Innovation Institute. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+<script>
+var ro=new IntersectionObserver(function(es){es.forEach(function(e){
+  if(!e.isIntersecting)return;
+  e.target.classList.add('in');ro.unobserve(e.target);
+});},{threshold:.08});
+document.querySelectorAll('.rv').forEach(function(el){ro.observe(el);});
+window.addEventListener('scroll',function(){
+  document.getElementById('nav').classList.toggle('sc',scrollY>60);
+});
+document.getElementById('nav').classList.toggle('sc',scrollY>60);
+</script>
+</body>
+</html>
