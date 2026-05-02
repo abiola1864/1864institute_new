@@ -7,133 +7,166 @@
 <link rel="icon" type="image/x-icon" href="favicon.ico"/>
 <link rel="icon" type="image/png" sizes="32x32" href="images/favicon.png"/>
 <link rel="apple-touch-icon" href="images/apple-touch-icon.png"/>
-<link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet"/><style>
-:root{--blue:#2C4C8A;--dark:#111c33;--green:#059669;--gold:#F59E0B;--gray:#F3F4F6;--muted:#6B7280;--ink:#111827;}
+<link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Open+Sans:ital,wght@0,300;0,400;0,600;1,400&display=swap" rel="stylesheet"/><style>
+:root{--dark:#0d1627;--navy:#111c33;--blue:#2C4C8A;--blue-mid:#3a5fa0;
+  --gold:#F59E0B;--gold-dark:#d97706;--green:#059669;
+  --gray:#F3F6FA;--ink:#0d1627;--mid:#4B5563;--muted:#9CA3AF;--white:#fff;}
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{font-family:'Open Sans',sans-serif;background:#fff;color:var(--ink);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+html{scroll-behavior:smooth}body{font-family:'Open Sans',sans-serif;background:#fff;
+  color:var(--ink);overflow-x:hidden;-webkit-font-smoothing:antialiased}
 a{text-decoration:none;color:inherit}img{display:block;max-width:100%}
-h1,h2,h3,h4{font-family:'Montserrat',sans-serif}
-.wrap{max-width:1100px;margin-inline:auto;padding-inline:clamp(20px,5vw,64px)}
-.rv{opacity:0;transform:translateY(20px);transition:opacity .6s,transform .6s}.rv.in{opacity:1;transform:none}
-#nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:center;
-  justify-content:space-between;padding:0 clamp(20px,5vw,64px);height:70px;transition:background .4s}
-#nav.sc{background:rgba(17,28,51,.97);backdrop-filter:blur(20px)}
-.nav-links{display:flex;align-items:center;gap:22px}
-.nav-links a{font-family:'Montserrat',sans-serif;font-size:.76rem;font-weight:500;color:rgba(255,255,255,.55);transition:color .2s}
-.nav-links a:hover{color:#fff}
-.ncta{background:#059669!important;color:#fff!important;padding:8px 20px;border-radius:6px!important;font-weight:600!important}
+h1,h2,h3,h4{font-family:'Montserrat',sans-serif;line-height:1.1}
+.wrap{max-width:1160px;margin-inline:auto;padding-inline:clamp(20px,5vw,60px)}
+.label{font-family:'Montserrat',sans-serif;font-size:.6rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase}
+.rv{opacity:0;transform:translateY(24px);transition:opacity .65s,transform .65s}.rv.in{opacity:1;transform:none}
+.rv2{opacity:0;transform:translateY(24px);transition:opacity .65s .12s,transform .65s .12s}.rv2.in{opacity:1;transform:none}
+#nav{position:fixed;top:0;left:0;right:0;z-index:300;height:68px;display:flex;align-items:center;
+  justify-content:space-between;padding:0 clamp(20px,5vw,60px);transition:all .35s}
+#nav.sc{background:rgba(13,22,39,.96);backdrop-filter:blur(24px);box-shadow:0 1px 0 rgba(255,255,255,.06)}
+.nav-logo img{height:38px;width:auto}
+.nav-links{display:flex;align-items:center;gap:20px}
+.nav-links a{font-family:'Montserrat',sans-serif;font-size:.72rem;font-weight:500;
+  color:rgba(255,255,255,.5);transition:color .2s}
+.nav-links a:hover,.nav-links a.on{color:#fff}
+.nav-links a.on{border-bottom:1.5px solid var(--gold);padding-bottom:1px}
+.nav-cta{background:var(--green)!important;color:#fff!important;padding:8px 20px;
+  border-radius:5px!important;font-weight:600!important;border-bottom:none!important}
+.nav-cta:hover{background:#047857!important}
 #burger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px}
-#burger span{display:block;width:22px;height:2px;background:rgba(255,255,255,.7);border-radius:2px}
-#mob{display:none;flex-direction:column;position:fixed;top:70px;left:0;right:0;z-index:199;
-  background:rgba(17,28,51,.98);padding:8px 0 24px}
-#mob a{display:block;padding:13px 28px;font-family:'Montserrat',sans-serif;font-size:.86rem;
-  font-weight:500;color:rgba(255,255,255,.6);border-bottom:1px solid rgba(255,255,255,.05)}
+#burger span{display:block;width:22px;height:1.5px;background:rgba(255,255,255,.7);border-radius:2px}
+#mob{display:none;flex-direction:column;position:fixed;top:68px;left:0;right:0;z-index:299;
+  background:rgba(13,22,39,.98);padding:6px 0 20px}
+#mob a{display:block;padding:13px 28px;font-family:'Montserrat',sans-serif;
+  font-size:.85rem;font-weight:500;color:rgba(255,255,255,.55);border-bottom:1px solid rgba(255,255,255,.04)}
 #mob.open{display:flex!important}
-.theme-bar{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}
-.theme-pill{font-family:'Montserrat',sans-serif;font-size:.6rem;font-weight:700;letter-spacing:.1em;
-  text-transform:uppercase;padding:5px 13px;border-radius:100px}
-.t-evidence{background:rgba(245,158,11,.12);color:#D97706}
-.t-tech{background:rgba(44,76,138,.1);color:#2C4C8A}
-.t-cocreate{background:rgba(5,150,105,.1);color:#059669}
-.niche-bar{background:#F3F4F6;border-left:3px solid var(--blue);padding:11px 16px;
-  font-family:'Montserrat',sans-serif;font-size:.78rem;font-weight:600;color:var(--blue);
-  border-radius:0 6px 6px 0;display:inline-block}
 @media(max-width:860px){.nav-links{display:none}#burger{display:flex}}
 @media(max-width:720px){.g2{grid-template-columns:1fr!important;gap:32px!important}}
 @media(max-width:640px){.g3{grid-template-columns:1fr!important}}
-@media(max-width:860px){.fg{grid-template-columns:1fr 1fr!important;gap:24px!important}}
-@media(max-width:500px){.fg{grid-template-columns:1fr!important}}
+@media(max-width:760px){.foot-grid{grid-template-columns:1fr 1fr!important;gap:28px!important}}
+footer{background:var(--dark);padding:clamp(52px,7vw,80px) 0 24px;border-top:1px solid rgba(255,255,255,.04)}
+.foot-grid{display:grid;grid-template-columns:1.8fr 1fr 1fr;gap:48px;margin-bottom:40px}
+.foot-hl{font-family:'Montserrat',sans-serif;font-size:.56rem;font-weight:700;
+  letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.18);margin-bottom:14px}
+.foot-link{display:block;font-size:.76rem;color:rgba(255,255,255,.35);margin-bottom:9px;transition:color .2s}
+.foot-link:hover{color:var(--gold)}
+.foot-bottom{border-top:1px solid rgba(255,255,255,.06);padding-top:18px}
+.foot-copy{font-size:.62rem;color:rgba(255,255,255,.18)}
+.btn-p{background:var(--blue);color:#fff;border-radius:5px;font-family:'Montserrat',sans-serif;
+  font-size:.78rem;font-weight:600;padding:12px 26px;display:inline-block;transition:background .2s}
+.btn-p:hover{background:var(--blue-mid)}
+.btn-g{background:var(--green);color:#fff;border-radius:5px;font-family:'Montserrat',sans-serif;
+  font-size:.78rem;font-weight:600;padding:12px 26px;display:inline-block;transition:background .2s}
+.btn-g:hover{background:#047857}
+.page-hero{background:var(--dark);padding:clamp(120px,14vw,160px) 0 clamp(56px,7vw,80px);position:relative;overflow:hidden}
+.page-hero::after{content:'';position:absolute;bottom:0;left:0;right:0;height:1px;
+  background:linear-gradient(to right,transparent,rgba(245,158,11,.25),transparent)}
+.ph-rule{width:32px;height:2px;background:var(--gold);margin-bottom:24px}
+.ph-label{font-family:'Montserrat',sans-serif;font-size:.6rem;font-weight:700;letter-spacing:.2em;
+  text-transform:uppercase;color:rgba(245,158,11,.6);margin-bottom:14px}
+.ph-h1{font-size:clamp(2.2rem,6vw,4rem);font-weight:900;color:#fff;letter-spacing:-.03em;margin-bottom:16px}
+.ph-h1 em{font-style:normal;color:var(--gold)}
+.ph-sub{font-size:.95rem;color:rgba(255,255,255,.42);line-height:1.85;max-width:540px}
+.cta-strip{background:var(--blue);padding:clamp(52px,7vw,80px) 0;text-align:center;position:relative;overflow:hidden}
+.cta-strip::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(245,158,11,.1),transparent 65%)}
+.cta-strip h2{font-size:clamp(1.5rem,4vw,2.4rem);font-weight:800;color:#fff;margin-bottom:10px;position:relative}
+.cta-strip p{font-size:.9rem;color:rgba(255,255,255,.48);margin-bottom:24px;max-width:360px;
+  margin-inline:auto;line-height:1.8;position:relative}
+.cta-strip a{position:relative;display:inline-block;background:var(--gold);color:var(--ink);
+  border-radius:5px;font-family:'Montserrat',sans-serif;font-size:.82rem;font-weight:700;
+  padding:12px 30px}
+.section-white{background:#fff;padding:clamp(64px,9vw,100px) 0}
+.section-gray{background:var(--gray);padding:clamp(64px,9vw,100px) 0}
+.section-dark{background:var(--navy);padding:clamp(64px,9vw,100px) 0}
+.section-head{margin-bottom:48px}
+.section-head .label{margin-bottom:12px}
+.section-head h2{font-size:clamp(1.6rem,4vw,2.4rem);font-weight:800;letter-spacing:-.02em}
 </style>
 </head>
 <body>
-<nav id="nav"><a href="index.html"><img src="images/logo_transparent.png" alt="1864" style="height:40px;width:auto"></a><div class="nav-links"><a href="index.html" >Home</a><a href="approach.html" >Our Approach</a><a href="projects.html" style='color:#fff'>Projects</a><a href="insights.html" >Insights</a><a href="team.html" >Team</a><a href="contact.html" class="ncta">Work With Us</a></div><div id="burger" onclick="document.getElementById('mob').classList.toggle('open')"><span></span><span></span><span></span></div></nav><div id="mob"><a href="index.html">Home</a><a href="approach.html">Our Approach</a><a href="projects.html">Projects</a><a href="insights.html">Insights</a><a href="team.html">Team</a><a href="contact.html">Work With Us</a></div><script>window.addEventListener("scroll",function(){document.getElementById("nav").classList.toggle("sc",scrollY>60)});document.getElementById("nav").classList.toggle("sc",scrollY>60)</script>
+<nav id="nav">
+  <a href="index.html" class="nav-logo"><img src="images/logo_transparent.png" alt="1864"></a>
+  <div class="nav-links"><a href="index.html" >Home</a><a href="approach.html" >Our Approach</a><a href="projects.html" class='on'>Projects</a><a href="insights.html" >Insights</a><a href="team.html" >Team</a><a href="contact.html" class="nav-cta">Work With Us</a></div>
+  <div id="burger" onclick="document.getElementById('mob').classList.toggle('open')"><span></span><span></span><span></span></div>
+</nav>
+<div id="mob"><a href="index.html">Home</a><a href="approach.html">Our Approach</a><a href="projects.html">Projects</a><a href="insights.html">Insights</a><a href="team.html">Team</a><a href="contact.html">Work With Us</a></div>
+<script>window.addEventListener('scroll',function(){document.getElementById('nav').classList.toggle('sc',scrollY>50)});document.getElementById('nav').classList.toggle('sc',scrollY>50)</script>
 
-<section style="background:#111c33;padding:clamp(110px,12vw,150px) 0 clamp(60px,8vw,80px)">
-  <div class="wrap"><div style="max-width:620px">
-    <h1 style="font-size:clamp(2.2rem,6vw,4rem);font-weight:800;line-height:1.0;letter-spacing:-.03em;color:#fff;margin-bottom:16px">One institution.<br>One proof of concept.<br><span style="color:#F59E0B">Done right.</span></h1>
-    <p style="font-size:.95rem;color:rgba(255,255,255,.48);line-height:1.85;margin-bottom:4px">Built on evidence. Using simple tech. Co-created with the people who will use it.</p>
-    <div class="theme-bar">
-  <span class="theme-pill t-evidence">Evidence</span>
-  <span class="theme-pill t-tech">Simple Tech</span>
-  <span class="theme-pill t-cocreate">Co-Creation</span>
-</div>
-  </div></div>
+<section class="page-hero">
+  <div class="wrap rv"><div class="ph-rule"></div>
+    <p class="ph-label">Our Work</p>
+    <h1 class="ph-h1">One institution.<br>One proof of concept.<br><em>Done right.</em></h1>
+    <p class="ph-sub">We are in our founding phase, scoping our first institutional engagement. One well-documented proof of concept that demonstrates impact creates the evidence base for everything that follows.</p>
+  </div>
 </section>
 
-<section style="background:#fff;padding:clamp(56px,8vw,88px) 0">
+<section class="section-white">
   <div class="wrap">
-    <div class="g2 rv" style="display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start;margin-bottom:44px">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start" class="g2 rv">
       <div>
-        <h2 style="font-size:clamp(1.3rem,3vw,1.8rem);font-weight:700;color:#111827;line-height:1.15;margin-bottom:14px">Crime and public safety data systems</h2>
-        <p style="font-size:.92rem;color:#6B7280;line-height:1.9;margin-bottom:14px">We are scoping our first engagement with a Nigerian security institution. The goal: build simple data tools that get crime evidence from the officer on the ground to the commander making patrol decisions.</p>
-        <div style="display:flex;gap:8px;flex-wrap:wrap">
-          <span class="theme-pill t-evidence">Evidence</span>
-          <span class="theme-pill t-tech">Simple Tech</span>
-          <span class="theme-pill t-cocreate">Co-Creation</span>
-        </div>
+        <p class="label" style="color:var(--blue);margin-bottom:12px">First Engagement</p>
+        <h2 style="font-size:clamp(1.5rem,3.5vw,2.2rem);font-weight:800;color:var(--ink);margin-bottom:16px;letter-spacing:-.02em">Crime and public safety data systems</h2>
+        <p style="font-size:.92rem;color:var(--mid);line-height:1.9;margin-bottom:14px">We are scoping our first engagement with a Nigerian security institution. The goal: build simple data tools that get crime evidence from the officer on the ground to the commander making patrol decisions.</p>
+        <p style="font-size:.92rem;color:var(--mid);line-height:1.9;margin-bottom:24px">Built with frontline officers. Using familiar tools. Run by internal champions after we leave.</p>
+        <a href="blog/why-crime-and-violence.html" style="font-family:'Montserrat',sans-serif;font-size:.75rem;font-weight:600;color:var(--blue)">Why this focus area →</a>
       </div>
-      <div style="background:#F3F4F6;border-radius:10px;padding:26px 22px">
-        <p style="font-family:'Montserrat',sans-serif;font-size:.62rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#6B7280;margin-bottom:14px">Every project we do</p>
-        <div style="display:flex;flex-direction:column;gap:12px">
-          <div style="display:flex;gap:12px;align-items:flex-start">
-            <span class="theme-pill t-evidence" style="flex-shrink:0;margin-top:2px">Evidence</span>
-            <p style="font-size:.85rem;color:#374151;line-height:1.7">Listen to frontline workers. Understand the real problem before building anything.</p>
+      <div style="background:var(--gray);border-radius:12px;padding:32px 28px">
+        <p class="label" style="color:var(--mid);margin-bottom:20px">Every project we do</p>
+        <div style="display:flex;flex-direction:column;gap:16px">
+          <div style="display:flex;gap:14px;align-items:flex-start">
+            <div style="width:28px;height:28px;background:var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-family:'Montserrat',sans-serif;font-weight:700;font-size:.65rem;color:var(--ink)">01</div>
+            <p style="font-size:.86rem;color:var(--mid);line-height:1.7;padding-top:4px">Listen to frontline workers. Understand the real problem before designing anything.</p>
           </div>
-          <div style="display:flex;gap:12px;align-items:flex-start">
-            <span class="theme-pill t-cocreate" style="flex-shrink:0;margin-top:2px">Co-Creation</span>
-            <p style="font-size:.85rem;color:#374151;line-height:1.7">Build with the people who will use the tools. They shape it. They own it.</p>
+          <div style="display:flex;gap:14px;align-items:flex-start">
+            <div style="width:28px;height:28px;background:var(--green);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-family:'Montserrat',sans-serif;font-weight:700;font-size:.65rem;color:#fff">02</div>
+            <p style="font-size:.86rem;color:var(--mid);line-height:1.7;padding-top:4px">Co-design with users. Build with familiar tools. They shape it and own it.</p>
           </div>
-          <div style="display:flex;gap:12px;align-items:flex-start">
-            <span class="theme-pill t-tech" style="flex-shrink:0;margin-top:2px">Simple Tech</span>
-            <p style="font-size:.85rem;color:#374151;line-height:1.7">Familiar tools. No IT department. Government staff run it after we leave.</p>
+          <div style="display:flex;gap:14px;align-items:flex-start">
+            <div style="width:28px;height:28px;background:var(--blue);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-family:'Montserrat',sans-serif;font-weight:700;font-size:.65rem;color:#fff">03</div>
+            <p style="font-size:.86rem;color:var(--mid);line-height:1.7;padding-top:4px">Measure impact honestly, publish what we learn, hand over to internal champions.</p>
           </div>
         </div>
-        <div style="margin-top:18px"><a href="approach.html" style="font-family:'Montserrat',sans-serif;font-size:.76rem;font-weight:600;color:#2C4C8A">Full methodology &rarr;</a></div>
+        <div style="margin-top:20px;padding-top:20px;border-top:1px solid #E5E7EB">
+          <a href="approach.html" class="btn-p" style="font-size:.74rem;padding:9px 20px">Full methodology →</a>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<section style="background:#2C4C8A;padding:clamp(48px,6vw,72px) 0;text-align:center">
+<section class="cta-strip">
   <div class="wrap rv">
-    <h2 style="font-size:clamp(1.3rem,3.5vw,1.9rem);font-weight:700;color:#fff;margin-bottom:10px">Is your institution ready to use its data?</h2>
-    <p style="font-size:.9rem;color:rgba(255,255,255,.55);margin-bottom:22px;max-width:360px;margin-inline:auto;line-height:1.8">We bring evidence, simple tech, and co-creation. You bring the institution and the data.</p>
-    <a href="contact.html" style="display:inline-block;background:#F59E0B;color:#111827;border-radius:6px;font-family:'Montserrat',sans-serif;font-size:.82rem;font-weight:700;padding:11px 26px">Start a conversation</a>
+    <h2>Is your institution ready to use its data?</h2>
+    <p>We build with the frontline workers who use the tools. You bring the institution and the data.</p>
+    <a href="contact.html">Start a conversation →</a>
   </div>
 </section>
-<footer style="background:#111c33;padding:clamp(44px,5vw,64px) 0 22px">
+<footer>
   <div class="wrap">
-    <div class="fg" style="display:grid;grid-template-columns:2fr 1fr 1fr;gap:40px;margin-bottom:32px">
+    <div class="foot-grid">
       <div>
-        <img src="images/logo_transparent.png" alt="1864" style="height:32px;width:auto;margin-bottom:14px">
-        <p style="font-family:'Montserrat',sans-serif;font-size:.86rem;font-weight:700;color:#fff;margin-bottom:8px">Informed public servants. Better services for those who need them most.</p>
-        <p style="font-size:.78rem;color:rgba(255,255,255,.32);line-height:1.8;margin-bottom:12px">Evidence. Simple tech. Co-creation.<br>Every project. Every tool. Every time.</p>
-        <div style="display:flex;gap:8px;flex-wrap:wrap">
-          <span style="font-family:'Montserrat',sans-serif;font-size:.56rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:4px 10px;border-radius:100px;background:rgba(245,158,11,.15);color:#F59E0B">Evidence</span>
-          <span style="font-family:'Montserrat',sans-serif;font-size:.56rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:4px 10px;border-radius:100px;background:rgba(44,76,138,.3);color:rgba(255,255,255,.6)">Simple Tech</span>
-          <span style="font-family:'Montserrat',sans-serif;font-size:.56rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:4px 10px;border-radius:100px;background:rgba(5,150,105,.2);color:#6EE7B7">Co-Creation</span>
-        </div>
+        <img src="images/logo_transparent.png" alt="1864" style="height:30px;width:auto;margin-bottom:14px">
+        <p style="font-family:'Montserrat',sans-serif;font-size:.82rem;font-weight:700;color:#fff;margin-bottom:6px">Informed public servants. Better services for those who need them most.</p>
+        <p style="font-size:.74rem;color:rgba(255,255,255,.28);line-height:1.8">Evidence. Simple technology. Co-creation.<br>Abuja, Nigeria &nbsp;·&nbsp; RC 9379383</p>
       </div>
       <div>
-        <p style="font-family:'Montserrat',sans-serif;font-size:.58rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.2);margin-bottom:12px">Pages</p>
-        <a href="index.html" style="display:block;font-size:.76rem;color:rgba(255,255,255,.38);margin-bottom:8px">Home</a>
-        <a href="approach.html" style="display:block;font-size:.76rem;color:rgba(255,255,255,.38);margin-bottom:8px">Our Approach</a>
-        <a href="projects.html" style="display:block;font-size:.76rem;color:rgba(255,255,255,.38);margin-bottom:8px">Projects</a>
-        <a href="insights.html" style="display:block;font-size:.76rem;color:rgba(255,255,255,.38);margin-bottom:8px">Insights</a>
-        <a href="team.html" style="display:block;font-size:.76rem;color:rgba(255,255,255,.38)">Team</a>
+        <p class="foot-hl">Navigate</p>
+        <a href="index.html" class="foot-link">Home</a>
+        <a href="approach.html" class="foot-link">Our Approach</a>
+        <a href="projects.html" class="foot-link">Projects</a>
+        <a href="insights.html" class="foot-link">Insights</a>
+        <a href="team.html" class="foot-link">Team</a>
       </div>
       <div>
-        <p style="font-family:'Montserrat',sans-serif;font-size:.58rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.2);margin-bottom:12px">Contact</p>
-        <a href="mailto:info@1864institute.org" style="display:block;font-size:.76rem;color:rgba(255,255,255,.38);margin-bottom:8px">info@1864institute.org</a>
-        <p style="font-size:.72rem;color:rgba(255,255,255,.18);margin-top:12px">RC 9379383 &nbsp;·&nbsp; Abuja, Nigeria</p>
+        <p class="foot-hl">Contact</p>
+        <a href="mailto:info@1864institute.org" class="foot-link">info@1864institute.org</a>
+        <a href="mailto:abiola@1864institute.org" class="foot-link">abiola@1864institute.org</a>
       </div>
     </div>
-    <div style="border-top:1px solid rgba(255,255,255,.07);padding-top:16px">
-      <p style="font-size:.65rem;color:rgba(255,255,255,.18)">&copy; 2026 The 1864 Research &amp; Innovation Institute.</p>
+    <div class="foot-bottom">
+      <p class="foot-copy">&copy; 2026 The 1864 Research &amp; Innovation Institute. All rights reserved.</p>
     </div>
   </div>
 </footer>
-<script>var ro=new IntersectionObserver(function(es){es.forEach(function(e){if(!e.isIntersecting)return;e.target.classList.add("in");ro.unobserve(e.target);});},{threshold:.08});document.querySelectorAll(".rv").forEach(function(el){ro.observe(el);});</script>
+<script>var ro=new IntersectionObserver(function(es){es.forEach(function(e){if(!e.isIntersecting)return;e.target.classList.add('in');ro.unobserve(e.target);});},{threshold:.07});document.querySelectorAll('.rv,.rv2').forEach(function(el){ro.observe(el)});</script>
 </body>
 </html>
