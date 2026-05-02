@@ -21,13 +21,19 @@ img{display:block;max-width:100%}
 .rv{opacity:0;transform:translateY(20px);transition:opacity .7s ease,transform .7s ease}
 .rv.in{opacity:1;transform:none}
 @keyframes drift{from{transform:scale(1.03)}to{transform:scale(1.03) translateY(-14px)}}
+
+@media(max-width:768px){
+  .two-col{grid-template-columns:1fr!important;gap:36px!important}
+  .three-col{grid-template-columns:1fr!important;gap:20px!important}
+  .footer-grid{grid-template-columns:1fr!important;gap:24px!important}
+}
 </style>
 </head>
 <body>
 <nav id="nav">
   <a href="index.html" class="nav-logo">
-    <div class="nav-logo-mark">1864</div>
-    <div class="nav-logo-text">The 1864 Research<br>&amp; Innovation Institute</div>
+    <img src="images/logo.svg" alt="The 1864 Institute" style="height:46px;width:auto;border-radius:6px">
+    <div class="nav-logo-text" style="font-family:'Cormorant Garamond',serif;font-size:.9rem;font-weight:600;color:rgba(255,255,255,.75);line-height:1.2">The 1864 Research<br>&amp; Innovation Institute</div>
   </a>
   <div class="nav-links">
     <a href="index.html">Home</a>
@@ -130,7 +136,7 @@ img{display:block;max-width:100%}
 </section>
 <footer style="background:#111c33;padding:clamp(48px,6vw,72px) 0 20px">
   <div class="wrap">
-    <div style="display:grid;grid-template-columns:1.8fr 1fr 1fr;gap:48px;margin-bottom:40px">
+    <div style="display:grid;grid-template-columns:1.8fr 1fr 1fr;gap:48px;margin-bottom:40px" class="footer-grid">
       <div>
         <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px">
           <div style="width:32px;height:32px;border:1.5px solid #c9a84c;border-radius:5px;display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:.85rem;font-weight:700;color:#c9a84c">1864</div>

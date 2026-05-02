@@ -21,13 +21,18 @@ img{display:block;max-width:100%}
 .rv{opacity:0;transform:translateY(20px);transition:opacity .7s ease,transform .7s ease}
 .rv.in{opacity:1;transform:none}
 @keyframes drift{from{transform:scale(1.03)}to{transform:scale(1.03) translateY(-14px)}}
+
+@media(max-width:700px){
+  .team-row{grid-template-columns:1fr!important;gap:24px!important}
+  .team-row>div:first-child div[style*="aspect-ratio"]{max-width:200px}
+}
 </style>
 </head>
 <body>
 <nav id="nav">
   <a href="index.html" class="nav-logo">
-    <div class="nav-logo-mark">1864</div>
-    <div class="nav-logo-text">The 1864 Research<br>&amp; Innovation Institute</div>
+    <img src="images/logo.svg" alt="The 1864 Institute" style="height:46px;width:auto;border-radius:6px">
+    <div class="nav-logo-text" style="font-family:'Cormorant Garamond',serif;font-size:.9rem;font-weight:600;color:rgba(255,255,255,.75);line-height:1.2">The 1864 Research<br>&amp; Innovation Institute</div>
   </a>
   <div class="nav-links">
     <a href="index.html">Home</a>
@@ -88,17 +93,17 @@ img{display:block;max-width:100%}
     <div style="display:flex;flex-direction:column;gap:48px">
 
       <!-- Abiola -->
-      <div class="rv" style="display:grid;grid-template-columns:280px 1fr;gap:56px;align-items:start;padding-bottom:48px;border-bottom:1px solid rgba(0,0,0,.07)">
+      <div class="rv team-row" style="display:grid;grid-template-columns:280px 1fr;gap:56px;align-items:start;padding-bottom:48px;border-bottom:1px solid rgba(0,0,0,.07)">
         <div>
           <div style="aspect-ratio:1;border-radius:12px;overflow:hidden;background:#f2f0ea;margin-bottom:20px;border:1px solid rgba(0,0,0,.08)">
-            <div style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:3rem;font-weight:300;color:rgba(0,0,0,.15)">AO</div>
+            <img src="images/abiola.jpg" alt="Dr. Abiola Oyebanjo" style="width:100%;height:100%;object-fit:cover;object-position:top">
           </div>
-          <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:700;color:#1a1a1a;margin-bottom:4px">Abiola Oyebanjo</h3>
-          <p style="font-size:.7rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:#c9a84c;margin-bottom:12px">Lead Researcher</p>
+          <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:700;color:#1a1a1a;margin-bottom:4px">Dr. Abiola Oyebanjo</h3>
+          <p style="font-size:.7rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:#c9a84c;margin-bottom:12px">Executive Director</p>
           <a href="mailto:abiola@1864institute.org" style="font-size:.8rem;color:#6b6b6b">abiola@1864institute.org</a>
         </div>
         <div style="padding-top:8px">
-          <p style="font-size:.68rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:#c9a84c;margin-bottom:14px;display:flex;align-items:center;gap:10px"><span style="width:18px;height:1px;background:#c9a84c;display:inline-block"></span>Lead Researcher</p>
+          <p style="font-size:.68rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:#c9a84c;margin-bottom:14px;display:flex;align-items:center;gap:10px"><span style="width:18px;height:1px;background:#c9a84c;display:inline-block"></span>Executive Director</p>
           <p style="font-size:.98rem;color:#6b6b6b;line-height:1.9;margin-bottom:18px">Abiola Oyebanjo is a sociologist and researcher with expertise in experimental and quasi-experimental research design, institutional analysis, and evidence-based policy in Nigeria. He holds a PhD in Sociology (Magna Cum Laude) from Humboldt University Berlin.</p>
           <p style="font-size:.98rem;color:#6b6b6b;line-height:1.9;margin-bottom:18px">His research spans labour markets, gender, small firm behaviour, and security sector governance. He is a co-author of a Nature publication on research reproducibility and has led evaluations and institutional assessments across Nigerian regulatory bodies.</p>
           <p style="font-size:.98rem;color:#6b6b6b;line-height:1.9">At the 1864 Institute, Abiola leads the research programme design and oversees both thematic areas.</p>
@@ -106,18 +111,34 @@ img{display:block;max-width:100%}
       </div>
 
       <!-- Nneka -->
-      <div class="rv" style="display:grid;grid-template-columns:280px 1fr;gap:56px;align-items:start">
+      <div class="rv team-row" style="display:grid;grid-template-columns:280px 1fr;gap:56px;align-items:start;padding-bottom:48px;border-bottom:1px solid rgba(0,0,0,.07)">
         <div>
           <div style="aspect-ratio:1;border-radius:12px;overflow:hidden;background:#f2f0ea;margin-bottom:20px;border:1px solid rgba(0,0,0,.08)">
-            <div style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:3rem;font-weight:300;color:rgba(0,0,0,.15)">NO</div>
+            <img src="images/nneka.jpg" alt="Dr. Nneka Esther Osadolor" style="width:100%;height:100%;object-fit:cover;object-position:top">
           </div>
           <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:700;color:#1a1a1a;margin-bottom:4px">Dr. Nneka Osadolor</h3>
-          <p style="font-size:.7rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:#c9a84c;margin-bottom:12px">Co-Researcher</p>
+          <p style="font-size:.7rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:#c9a84c;margin-bottom:12px">Director & Co-Researcher</p>
         </div>
         <div style="padding-top:8px">
-          <p style="font-size:.68rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:#c9a84c;margin-bottom:14px;display:flex;align-items:center;gap:10px"><span style="width:18px;height:1px;background:#c9a84c;display:inline-block"></span>Co-Researcher</p>
+          <p style="font-size:.68rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:#c9a84c;margin-bottom:14px;display:flex;align-items:center;gap:10px"><span style="width:18px;height:1px;background:#c9a84c;display:inline-block"></span>Director & Co-Researcher</p>
           <p style="font-size:.98rem;color:#6b6b6b;line-height:1.9;margin-bottom:18px">Dr. Nneka Osadolor is a researcher affiliated with the University of Benin and the World Bank Nigeria Gender Innovation Lab. Her work focuses on gender, institutions, and development in the Nigerian context.</p>
           <p style="font-size:.98rem;color:#6b6b6b;line-height:1.9">At the 1864 Institute, Dr. Osadolor co-leads the gender research area and contributes to the Institute's broader methodological approach to institutional analysis.</p>
+        </div>
+      </div>
+
+      <!-- Akintoye -->
+      <div class="rv team-row" style="display:grid;grid-template-columns:280px 1fr;gap:56px;align-items:start">
+        <div>
+          <div style="aspect-ratio:1;border-radius:12px;overflow:hidden;background:#f2f0ea;margin-bottom:20px;border:1px solid rgba(0,0,0,.08)">
+            <img src="images/akintoye.png" alt="Akintoye Oyekunle Oluwatobi" style="width:100%;height:100%;object-fit:cover;object-position:top">
+          </div>
+          <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:700;color:#1a1a1a;margin-bottom:4px">Akintoye Oyekunle</h3>
+          <p style="font-size:.7rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:#c9a84c;margin-bottom:12px">Director</p>
+        </div>
+        <div style="padding-top:8px">
+          <p style="font-size:.68rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:#c9a84c;margin-bottom:14px;display:flex;align-items:center;gap:10px"><span style="width:18px;height:1px;background:#c9a84c;display:inline-block"></span>Director</p>
+          <p style="font-size:.98rem;color:#6b6b6b;line-height:1.9;margin-bottom:18px">Akintoye Oyekunle Oluwatobi is a founding Director of the 1864 Research and Innovation Institute, based in Abuja, FCT. He brings professional expertise in institutional governance, operational management, and organisational strategy to the Institute's leadership.</p>
+          <p style="font-size:.98rem;color:#6b6b6b;line-height:1.9">As a member of the Board of Directors, Akintoye contributes to strategic oversight of the Institute's research portfolio and long-term institutional direction, ensuring that the Institute's work remains grounded, sustainable, and impactful.</p>
         </div>
       </div>
 

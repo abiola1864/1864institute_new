@@ -21,13 +21,18 @@ img{display:block;max-width:100%}
 .rv{opacity:0;transform:translateY(20px);transition:opacity .7s ease,transform .7s ease}
 .rv.in{opacity:1;transform:none}
 @keyframes drift{from{transform:scale(1.03)}to{transform:scale(1.03) translateY(-14px)}}
+
+@media(max-width:768px){
+  .two-col{grid-template-columns:1fr!important;gap:40px!important}
+  .stat-grid{grid-template-columns:1fr 1fr!important}
+}
 </style>
 </head>
 <body>
 <nav id="nav">
   <a href="index.html" class="nav-logo">
-    <div class="nav-logo-mark">1864</div>
-    <div class="nav-logo-text">The 1864 Research<br>&amp; Innovation Institute</div>
+    <img src="images/logo.svg" alt="The 1864 Institute" style="height:46px;width:auto;border-radius:6px">
+    <div class="nav-logo-text" style="font-family:'Cormorant Garamond',serif;font-size:.9rem;font-weight:600;color:rgba(255,255,255,.75);line-height:1.2">The 1864 Research<br>&amp; Innovation Institute</div>
   </a>
   <div class="nav-links">
     <a href="index.html">Home</a>
@@ -89,7 +94,7 @@ img{display:block;max-width:100%}
         <span style="font-size:.68rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.5)">Established 2026 &middot; Nigeria</span>
       </div>
       <h1 style="font-family:'Cormorant Garamond',serif;font-size:clamp(3rem,7vw,6.5rem);font-weight:300;line-height:.95;letter-spacing:-.025em;color:#ffffff;margin-bottom:28px">Evidence for<br><em style="font-style:italic;color:#c9a84c">harder questions.</em></h1>
-      <p style="font-size:1.05rem;color:rgba(255,255,255,.5);line-height:1.85;max-width:520px;margin-bottom:48px;font-weight:300">The 1864 Research &amp; Innovation Institute conducts independent, rigorous research on crime, violence, peace, and gender in Nigeria and West Africa.</p>
+      <p style="font-size:1.05rem;color:rgba(255,255,255,.5);line-height:1.85;max-width:520px;margin-bottom:48px;font-weight:300">The 1864 Research &amp; Innovation Institute advances research and innovation that supports sustainable development and social impact in Nigeria and across Africa.</p>
       <div style="display:flex;gap:14px;flex-wrap:wrap">
         <a href="research.html" style="display:inline-flex;align-items:center;gap:7px;background:#c9a84c;color:#111c33;border-radius:100px;font-size:.85rem;font-weight:600;padding:14px 30px">Our research &rarr;</a>
         <a href="team.html" style="display:inline-flex;align-items:center;gap:7px;border:1px solid rgba(255,255,255,.2);color:rgba(255,255,255,.65);border-radius:100px;font-size:.85rem;font-weight:400;padding:14px 30px">Meet the team</a>
@@ -106,32 +111,32 @@ img{display:block;max-width:100%}
 <!-- WHO WE ARE -->
 <section style="background:#fafaf7;padding:clamp(80px,10vw,130px) 0">
   <div class="wrap">
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center" class="two-col">
       <div class="rv">
         <p style="font-size:.68rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:#c9a84c;margin-bottom:14px;display:flex;align-items:center;gap:10px"><span style="width:18px;height:1px;background:#c9a84c;display:inline-block"></span>About the Institute</p>
         <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,4.5vw,3.2rem);font-weight:700;letter-spacing:-.02em;line-height:1.05;color:#1a1a1a;margin-bottom:32px">Independent research.<br>Practical impact.</h2>
-        <p style="font-size:.98rem;color:#6b6b6b;line-height:1.9;margin-bottom:20px">The 1864 Research &amp; Innovation Institute was established in 2026 to generate rigorous, independent evidence on some of West Africa's most difficult policy questions — those at the intersection of security, justice, and equality.</p>
-        <p style="font-size:.98rem;color:#6b6b6b;line-height:1.9;margin-bottom:32px">We work with communities, institutions, and policymakers to ensure that evidence is not just produced but used. Our research is designed from the start to be actionable.</p>
+        <p style="font-size:.98rem;color:#6b6b6b;line-height:1.9;margin-bottom:20px">The 1864 Research &amp; Innovation Institute was established in 2026 to advance research and innovation that supports sustainable development and social impact in Nigeria and across Africa. We conduct rigorous studies, support research activities, build practical solutions, and share knowledge that improves systems, communities, and institutions.</p>
+        <p style="font-size:.98rem;color:#6b6b6b;line-height:1.9;margin-bottom:32px">We work with communities, institutions, and policymakers to ensure that evidence is not just produced but used &mdash; designing research from the start to be actionable and translatable into real-world change.</p>
         <a href="team.html" style="font-size:.85rem;font-weight:600;color:#c9a84c">Meet our researchers &rarr;</a>
       </div>
       <div class="rv">
         <!-- Stat cards -->
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px" class="stat-grid">
           <div style="background:#1a2744;border-radius:12px;padding:28px 24px">
             <p style="font-family:'Cormorant Garamond',serif;font-size:2.6rem;font-weight:700;color:#c9a84c;line-height:1;margin-bottom:6px">2026</p>
             <p style="font-size:.72rem;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.4)">Year established</p>
           </div>
           <div style="background:#f2f0ea;border-radius:12px;padding:28px 24px">
-            <p style="font-family:'Cormorant Garamond',serif;font-size:2.6rem;font-weight:700;color:#1a2744;line-height:1;margin-bottom:6px">2</p>
-            <p style="font-size:.72rem;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:#6b6b6b">Core research areas</p>
+            <p style="font-family:'Cormorant Garamond',serif;font-size:2.6rem;font-weight:700;color:#1a2744;line-height:1;margin-bottom:6px">3</p>
+            <p style="font-size:.72rem;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:#6b6b6b">Founding Directors</p>
           </div>
           <div style="background:#f2f0ea;border-radius:12px;padding:28px 24px">
             <p style="font-family:'Cormorant Garamond',serif;font-size:2.6rem;font-weight:700;color:#1a2744;line-height:1;margin-bottom:6px">Nigeria</p>
             <p style="font-size:.72rem;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:#6b6b6b">Primary geography</p>
           </div>
           <div style="background:#1a2744;border-radius:12px;padding:28px 24px">
-            <p style="font-family:'Cormorant Garamond',serif;font-size:2.6rem;font-weight:700;color:#c9a84c;line-height:1;margin-bottom:6px">2yr</p>
-            <p style="font-size:.72rem;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.4)">Research horizon</p>
+            <p style="font-family:'Cormorant Garamond',serif;font-size:2.6rem;font-weight:700;color:#c9a84c;line-height:1;margin-bottom:6px">Africa</p>
+            <p style="font-size:.72rem;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.4)">Research reach</p>
           </div>
         </div>
       </div>
@@ -232,7 +237,7 @@ img{display:block;max-width:100%}
 </section>
 <footer style="background:#111c33;padding:clamp(48px,6vw,72px) 0 20px">
   <div class="wrap">
-    <div style="display:grid;grid-template-columns:1.8fr 1fr 1fr;gap:48px;margin-bottom:40px">
+    <div style="display:grid;grid-template-columns:1.8fr 1fr 1fr;gap:48px;margin-bottom:40px" class="footer-grid">
       <div>
         <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px">
           <div style="width:32px;height:32px;border:1.5px solid #c9a84c;border-radius:5px;display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:.85rem;font-weight:700;color:#c9a84c">1864</div>
