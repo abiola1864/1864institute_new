@@ -4,197 +4,91 @@
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>Team — The 1864 Research &amp; Innovation Institute</title>
-<link rel="preconnect" href="https://fonts.googleapis.com"/>
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
-<style>
-:root{
-  --navy:#1a2744;--navy2:#111c33;--gold:#c9a84c;--gold2:#a8873a;
-  --cream:#fafaf7;--stone:#f2f0ea;--muted:#6b6b6b;--ink:#1a1a1a;--white:#ffffff;
-}
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{font-family:'Inter',sans-serif;background:var(--cream);color:var(--ink);overflow-x:hidden;-webkit-font-smoothing:antialiased}
-a{text-decoration:none;color:inherit}
-img{display:block;max-width:100%}
-.wrap{max-width:1200px;margin-inline:auto;padding-inline:clamp(24px,5vw,72px)}
-.rv{opacity:0;transform:translateY(20px);transition:opacity .7s ease,transform .7s ease}
-.rv.in{opacity:1;transform:none}
-@keyframes drift{from{transform:scale(1.03)}to{transform:scale(1.03) translateY(-14px)}}
-
-@media(max-width:700px){
-  .team-row{grid-template-columns:1fr!important;gap:24px!important}
-  .team-row>div:first-child div[style*="aspect-ratio"]{max-width:200px}
-}
-</style>
+<link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet"/><style>:root{--blue:#1E3A8A;--blue2:#162d6e;--dark:#0F172A;--green:#059669;--green2:#047857;--gold:#F59E0B;--gold2:#D97706;--gray:#F3F4F6;--muted:#6B7280;--ink:#111827;}*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}body{font-family:'Open Sans',sans-serif;background:#fff;color:var(--ink);overflow-x:hidden;-webkit-font-smoothing:antialiased}a{text-decoration:none;color:inherit}img{display:block;max-width:100%}h1,h2,h3,h4{font-family:'Montserrat',sans-serif}.wrap{max-width:1200px;margin-inline:auto;padding-inline:clamp(20px,5vw,64px)}.rv{opacity:0;transform:translateY(20px);transition:opacity .6s,transform .6s}.rv.in{opacity:1;transform:none}#nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:0 clamp(20px,5vw,64px);height:70px;transition:background .4s}#nav.sc{background:rgba(15,23,42,.97);backdrop-filter:blur(20px);box-shadow:0 1px 0 rgba(255,255,255,.07)}.nav-links{display:flex;align-items:center;gap:22px}.nav-links a{font-family:'Montserrat',sans-serif;font-size:.76rem;font-weight:500;color:rgba(255,255,255,.5);transition:color .2s}.nav-links a:hover{color:#fff}.ncta{background:#059669!important;color:#fff!important;padding:8px 20px;border-radius:6px!important;font-weight:600!important}.ncta:hover{background:#047857!important}#burger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px}#burger span{display:block;width:22px;height:2px;background:rgba(255,255,255,.7);border-radius:2px}#mob{display:none;flex-direction:column;position:fixed;top:70px;left:0;right:0;z-index:199;background:rgba(15,23,42,.98);padding:8px 0 24px}#mob a{display:block;padding:13px 28px;font-family:'Montserrat',sans-serif;font-size:.86rem;font-weight:500;color:rgba(255,255,255,.6);border-bottom:1px solid rgba(255,255,255,.05)}#mob.open{display:flex!important}@media(max-width:860px){.nav-links{display:none}#burger{display:flex}}@media(max-width:720px){.g2{grid-template-columns:1fr!important;gap:40px!important}}@media(max-width:640px){.g3{grid-template-columns:1fr!important}}@media(max-width:860px){.fg{grid-template-columns:1fr 1fr!important;gap:28px!important}}@media(max-width:500px){.fg{grid-template-columns:1fr!important}}</style>
 </head>
 <body>
-<nav id="nav">
-  <a href="index.html" class="nav-logo">
-    <img src="images/logo.svg" alt="The 1864 Institute" style="height:46px;width:auto;border-radius:6px">
-    <div class="nav-logo-text" style="font-family:'Cormorant Garamond',serif;font-size:.9rem;font-weight:600;color:rgba(255,255,255,.75);line-height:1.2">The 1864 Research<br>&amp; Innovation Institute</div>
-  </a>
-  <div class="nav-links">
-    <a href="index.html">Home</a>
-    <a href="research.html">Research</a>
-    <a href="team.html">Team</a>
-    <a href="contact.html">Contact</a>
-    <a href="contact.html" class="nav-cta">Get in touch</a>
-  </div>
-  <div id="burger" onclick="document.getElementById('mob').classList.toggle('open')">
-    <span></span><span></span><span></span>
-  </div>
-</nav>
-<div id="mob">
-  <a href="index.html">Home</a>
-  <a href="research.html">Research</a>
-  <a href="team.html">Team</a>
-  <a href="contact.html">Contact</a>
-</div>
-<style>
-#nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:center;
-  justify-content:space-between;padding:0 clamp(20px,5vw,64px);height:76px;transition:background .4s}
-#nav.sc{background:rgba(26,39,68,.97);backdrop-filter:blur(18px);box-shadow:0 1px 0 rgba(255,255,255,.06)}
-.nav-logo{display:flex;align-items:center;gap:12px}
-.nav-logo-mark{width:36px;height:36px;border:1.5px solid #c9a84c;border-radius:6px;
-  display:flex;align-items:center;justify-content:center;
-  font-family:'Cormorant Garamond',serif;font-size:1rem;font-weight:700;color:#c9a84c}
-.nav-logo-text{font-family:'Cormorant Garamond',serif;font-size:.95rem;font-weight:600;
-  color:rgba(255,255,255,.75);line-height:1.2}
-.nav-links{display:flex;align-items:center;gap:28px}
-.nav-links a{font-size:.82rem;font-weight:400;color:rgba(255,255,255,.55);transition:color .2s;letter-spacing:.01em}
-.nav-links a:hover{color:#c9a84c}
-.nav-cta{background:#c9a84c;color:#111c33!important;font-weight:600!important;
-  padding:9px 22px;border-radius:100px;font-size:.8rem!important;transition:background .2s!important}
-.nav-cta:hover{background:#a8873a!important}
-#burger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px}
-#burger span{display:block;width:22px;height:1.5px;background:rgba(255,255,255,.6)}
-#mob{display:none;flex-direction:column;position:fixed;top:76px;left:0;right:0;z-index:199;
-  background:rgba(26,39,68,.98);border-bottom:1px solid rgba(255,255,255,.06);padding:8px 0 20px}
-#mob a{display:block;padding:14px 28px;font-size:.9rem;color:rgba(255,255,255,.55);
-  border-bottom:1px solid rgba(255,255,255,.04)}
-#mob.open{display:flex!important}
-@media(max-width:860px){.nav-links{display:none}#burger{display:flex}}
-</style>
-<script>window.addEventListener('scroll',function(){document.getElementById('nav').classList.toggle('sc',scrollY>60);});document.getElementById('nav').classList.toggle('sc',scrollY>60);</script>
+<nav id="nav"><a href="index.html"><img src="images/logo_real.png" alt="1864" style="height:40px;width:auto"></a><div class="nav-links"><a href="index.html" >Home</a><a href="approach.html" >Our Approach</a><a href="projects.html" >Projects</a><a href="blog.html" >Insights</a><a href="team.html" style="color:#fff">Team</a><a href="contact.html" class="ncta">Work With Us</a></div><div id="burger" onclick="document.getElementById('mob').classList.toggle('open')"><span></span><span></span><span></span></div></nav><div id="mob"><a href="index.html">Home</a><a href="approach.html">Our Approach</a><a href="projects.html">Projects</a><a href="blog.html">Insights</a><a href="team.html">Team</a><a href="contact.html">Work With Us</a></div><script>window.addEventListener("scroll",function(){document.getElementById("nav").classList.toggle("sc",scrollY>60)});document.getElementById("nav").classList.toggle("sc",scrollY>60)</script>
 
-<section style="background:#111c33;padding:clamp(120px,12vw,160px) 0 clamp(64px,8vw,96px)">
-  <div class="wrap">
-    <div style="max-width:640px">
-      <p style="font-size:.68rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:rgba(201,168,76,.7);margin-bottom:14px;display:flex;align-items:center;gap:10px"><span style="width:18px;height:1px;background:rgba(201,168,76,.7);display:inline-block"></span>The researchers</p>
-      <h1 style="font-family:'Cormorant Garamond',serif;font-size:clamp(2.8rem,6vw,5rem);font-weight:300;line-height:.96;letter-spacing:-.025em;color:#ffffff;margin-bottom:22px">Our team</h1>
-      <p style="font-size:1rem;color:rgba(255,255,255,.45);line-height:1.85">A small, focused team of researchers committed to producing work that is rigorous, independent, and genuinely useful.</p>
-    </div>
-  </div>
+<section style="background:#0F172A;padding:clamp(110px,12vw,150px) 0 clamp(60px,8vw,88px)">
+  <div class="wrap"><div style="max-width:600px">
+    <p style="font-family:'Montserrat',sans-serif;font-size:.63rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:rgba(245,158,11,.8);margin-bottom:12px">The Board</p>
+    <h1 style="font-size:clamp(2.4rem,6vw,4.4rem);font-weight:800;line-height:1.0;letter-spacing:-.03em;color:#fff;margin-bottom:20px">Our team.</h1>
+    <p style="font-size:1rem;color:rgba(255,255,255,.48);line-height:1.85">Three board members. Clear roles. No overhead. Research rigour + M&amp;E expertise + institutional access — the exact combination needed to make government technology actually work.</p>
+  </div></div>
 </section>
 
-<section style="background:#fafaf7;padding:clamp(80px,10vw,120px) 0">
+<section style="background:#fff;padding:clamp(60px,8vw,96px) 0">
   <div class="wrap">
-    <div style="display:flex;flex-direction:column;gap:48px">
+    <div style="display:flex;flex-direction:column;gap:0">
 
-      <!-- Abiola -->
-      <div class="rv team-row" style="display:grid;grid-template-columns:280px 1fr;gap:56px;align-items:start;padding-bottom:48px;border-bottom:1px solid rgba(0,0,0,.07)">
+      <div class="rv g2" style="display:grid;grid-template-columns:260px 1fr;gap:52px;align-items:start;padding-bottom:48px;border-bottom:1px solid #E5E7EB;margin-bottom:48px">
         <div>
-          <div style="aspect-ratio:1;border-radius:12px;overflow:hidden;background:#f2f0ea;margin-bottom:20px;border:1px solid rgba(0,0,0,.08)">
+          <div style="aspect-ratio:1;border-radius:12px;overflow:hidden;background:#F3F4F6;margin-bottom:18px;border:1px solid #E5E7EB">
             <img src="images/abiola.jpg" alt="Dr. Abiola Oyebanjo" style="width:100%;height:100%;object-fit:cover;object-position:top">
           </div>
-          <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:700;color:#1a1a1a;margin-bottom:4px">Dr. Abiola Oyebanjo</h3>
-          <p style="font-size:.7rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:#c9a84c;margin-bottom:12px">Executive Director</p>
-          <a href="mailto:abiola@1864institute.org" style="font-size:.8rem;color:#6b6b6b">abiola@1864institute.org</a>
+          <h3 style="font-family:'Montserrat',sans-serif;font-size:1.2rem;font-weight:700;color:#111827;margin-bottom:4px">Dr. Abiola Oyebanjo</h3>
+          <p style="font-family:'Montserrat',sans-serif;font-size:.65rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#1E3A8A;margin-bottom:10px">Executive Director</p>
+          <a href="mailto:abiola@1864institute.org" style="font-size:.78rem;color:#6B7280">abiola@1864institute.org</a>
         </div>
-        <div style="padding-top:8px">
-          <p style="font-size:.68rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:#c9a84c;margin-bottom:14px;display:flex;align-items:center;gap:10px"><span style="width:18px;height:1px;background:#c9a84c;display:inline-block"></span>Executive Director</p>
-          <p style="font-size:.98rem;color:#6b6b6b;line-height:1.9;margin-bottom:18px">Abiola Oyebanjo is a sociologist and researcher with expertise in experimental and quasi-experimental research design, institutional analysis, and evidence-based policy in Nigeria. He holds a PhD in Sociology (Magna Cum Laude) from Humboldt University Berlin.</p>
-          <p style="font-size:.98rem;color:#6b6b6b;line-height:1.9;margin-bottom:18px">His research spans labour markets, gender, small firm behaviour, and security sector governance. He is a co-author of a Nature publication on research reproducibility and has led evaluations and institutional assessments across Nigerian regulatory bodies.</p>
-          <p style="font-size:.98rem;color:#6b6b6b;line-height:1.9">At the 1864 Institute, Abiola leads the research programme design and oversees both thematic areas.</p>
-        </div>
-      </div>
-
-      <!-- Nneka -->
-      <div class="rv team-row" style="display:grid;grid-template-columns:280px 1fr;gap:56px;align-items:start;padding-bottom:48px;border-bottom:1px solid rgba(0,0,0,.07)">
-        <div>
-          <div style="aspect-ratio:1;border-radius:12px;overflow:hidden;background:#f2f0ea;margin-bottom:20px;border:1px solid rgba(0,0,0,.08)">
-            <img src="images/nneka.jpg" alt="Dr. Nneka Esther Osadolor" style="width:100%;height:100%;object-fit:cover;object-position:top">
+        <div style="padding-top:4px">
+          <div style="background:#F3F4F6;border-radius:8px;padding:14px 18px;margin-bottom:20px;display:flex;gap:20px;flex-wrap:wrap">
+            <div><p style="font-family:'Montserrat',sans-serif;font-size:.58rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#6B7280;margin-bottom:3px">Focus Area</p><p style="font-size:.82rem;font-weight:600;color:#374151">Strategy, Institutional Access, Fundraising</p></div>
+            <div><p style="font-family:'Montserrat',sans-serif;font-size:.58rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#6B7280;margin-bottom:3px">Year 1 Deliverable</p><p style="font-size:.82rem;font-weight:600;color:#374151">Police Force MoU + Website + Brand</p></div>
           </div>
-          <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:700;color:#1a1a1a;margin-bottom:4px">Dr. Nneka Osadolor</h3>
-          <p style="font-size:.7rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:#c9a84c;margin-bottom:12px">Director & Co-Researcher</p>
-        </div>
-        <div style="padding-top:8px">
-          <p style="font-size:.68rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:#c9a84c;margin-bottom:14px;display:flex;align-items:center;gap:10px"><span style="width:18px;height:1px;background:#c9a84c;display:inline-block"></span>Director & Co-Researcher</p>
-          <p style="font-size:.98rem;color:#6b6b6b;line-height:1.9;margin-bottom:18px">Dr. Nneka Osadolor is a researcher affiliated with the University of Benin and the World Bank Nigeria Gender Innovation Lab. Her work focuses on gender, institutions, and development in the Nigerian context.</p>
-          <p style="font-size:.98rem;color:#6b6b6b;line-height:1.9">At the 1864 Institute, Dr. Osadolor co-leads the gender research area and contributes to the Institute's broader methodological approach to institutional analysis.</p>
+          <p style="font-size:.94rem;color:#6B7280;line-height:1.9;margin-bottom:16px">Abiola Oyebanjo is a sociologist and researcher with deep expertise in experimental research design, institutional analysis, and evidence-based policy in Nigeria. He holds a PhD in Sociology (Magna Cum Laude) from Humboldt University Berlin and is a co-author of a Nature publication on research reproducibility.</p>
+          <p style="font-size:.94rem;color:#6B7280;line-height:1.9;margin-bottom:16px">He has spent years embedded inside Nigerian regulatory institutions — including the Central Bank of Nigeria, the Nigerian Communications Commission, and the Kaduna State Investment Promotion Agency — helping them build data systems and analytical capacity.</p>
+          <p style="font-size:.94rem;color:#6B7280;line-height:1.9">At the 1864 Institute, Abiola leads institutional engagement, fundraising, and external communications. He is the primary point of contact for government partnerships.</p>
         </div>
       </div>
 
-      <!-- Akintoye -->
-      <div class="rv team-row" style="display:grid;grid-template-columns:280px 1fr;gap:56px;align-items:start">
+      <div class="rv g2" style="display:grid;grid-template-columns:260px 1fr;gap:52px;align-items:start;padding-bottom:48px;border-bottom:1px solid #E5E7EB;margin-bottom:48px">
         <div>
-          <div style="aspect-ratio:1;border-radius:12px;overflow:hidden;background:#f2f0ea;margin-bottom:20px;border:1px solid rgba(0,0,0,.08)">
-            <img src="images/akintoye.png" alt="Akintoye Oyekunle Oluwatobi" style="width:100%;height:100%;object-fit:cover;object-position:top">
+          <div style="aspect-ratio:1;border-radius:12px;overflow:hidden;background:#F3F4F6;margin-bottom:18px;border:1px solid #E5E7EB">
+            <img src="images/nneka.jpg" alt="Dr. Nneka Osadolor" style="width:100%;height:100%;object-fit:cover;object-position:top">
           </div>
-          <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:700;color:#1a1a1a;margin-bottom:4px">Akintoye Oyekunle</h3>
-          <p style="font-size:.7rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:#c9a84c;margin-bottom:12px">Director</p>
+          <h3 style="font-family:'Montserrat',sans-serif;font-size:1.2rem;font-weight:700;color:#111827;margin-bottom:4px">Dr. Nneka Osadolor</h3>
+          <p style="font-family:'Montserrat',sans-serif;font-size:.65rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#059669;margin-bottom:10px">Director of Research</p>
         </div>
-        <div style="padding-top:8px">
-          <p style="font-size:.68rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:#c9a84c;margin-bottom:14px;display:flex;align-items:center;gap:10px"><span style="width:18px;height:1px;background:#c9a84c;display:inline-block"></span>Director</p>
-          <p style="font-size:.98rem;color:#6b6b6b;line-height:1.9;margin-bottom:18px">Akintoye Oyekunle Oluwatobi is a founding Director of the 1864 Research and Innovation Institute, based in Abuja, FCT. He brings professional expertise in institutional governance, operational management, and organisational strategy to the Institute's leadership.</p>
-          <p style="font-size:.98rem;color:#6b6b6b;line-height:1.9">As a member of the Board of Directors, Akintoye contributes to strategic oversight of the Institute's research portfolio and long-term institutional direction, ensuring that the Institute's work remains grounded, sustainable, and impactful.</p>
+        <div style="padding-top:4px">
+          <div style="background:#F3F4F6;border-radius:8px;padding:14px 18px;margin-bottom:20px;display:flex;gap:20px;flex-wrap:wrap">
+            <div><p style="font-family:'Montserrat',sans-serif;font-size:.58rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#6B7280;margin-bottom:3px">Focus Area</p><p style="font-size:.82rem;font-weight:600;color:#374151">Research Quality, Methodology, Publications</p></div>
+            <div><p style="font-family:'Montserrat',sans-serif;font-size:.58rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#6B7280;margin-bottom:3px">Year 1 Deliverable</p><p style="font-size:.82rem;font-weight:600;color:#374151">1–2 Policy Briefs + Methodology Library</p></div>
+          </div>
+          <p style="font-size:.94rem;color:#6B7280;line-height:1.9;margin-bottom:16px">Dr. Nneka Osadolor is a researcher whose work focuses on gender, institutions, and development in the Nigerian context. She brings academic rigour and a commitment to methodological integrity that underpins all of the 1864 Institute's outputs.</p>
+          <p style="font-size:.94rem;color:#6B7280;line-height:1.9;margin-bottom:16px">At the 1864 Institute, Nneka reviews all scoping reports and deliverables, oversees the methodology library, leads the publication strategy, and designs capacity building modules for partner institutions.</p>
+          <p style="font-size:.94rem;color:#6B7280;line-height:1.9">She is the research quality guarantee — ensuring that what the Institute produces meets the standards required to be taken seriously by academic and policy audiences alike.</p>
         </div>
       </div>
 
+      <div class="rv g2" style="display:grid;grid-template-columns:260px 1fr;gap:52px;align-items:start">
+        <div>
+          <div style="aspect-ratio:1;border-radius:12px;overflow:hidden;background:#F3F4F6;margin-bottom:18px;border:1px solid #E5E7EB">
+            <img src="images/akintoye.png" alt="Akintoye Oyekunle" style="width:100%;height:100%;object-fit:cover;object-position:top">
+          </div>
+          <h3 style="font-family:'Montserrat',sans-serif;font-size:1.2rem;font-weight:700;color:#111827;margin-bottom:4px">Akintoye Oyekunle</h3>
+          <p style="font-family:'Montserrat',sans-serif;font-size:.65rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#D97706;margin-bottom:10px">Director of Operations &amp; M&amp;E</p>
+        </div>
+        <div style="padding-top:4px">
+          <div style="background:#F3F4F6;border-radius:8px;padding:14px 18px;margin-bottom:20px;display:flex;gap:20px;flex-wrap:wrap">
+            <div><p style="font-family:'Montserrat',sans-serif;font-size:.58rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#6B7280;margin-bottom:3px">Focus Area</p><p style="font-size:.82rem;font-weight:600;color:#374151">M&amp;E, Operations, Budget, Staff</p></div>
+            <div><p style="font-family:'Montserrat',sans-serif;font-size:.58rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#6B7280;margin-bottom:3px">Year 1 Deliverable</p><p style="font-size:.82rem;font-weight:600;color:#374151">M&amp;E Framework + POC Implementation</p></div>
+          </div>
+          <p style="font-size:.94rem;color:#6B7280;line-height:1.9;margin-bottom:16px">Akintoye Oyekunle Oluwatobi brings expertise in M&amp;E framework design, operational systems, and results measurement to the 1864 Institute. He is responsible for the day-to-day running of the organisation and the integrity of its impact measurement.</p>
+          <p style="font-size:.94rem;color:#6B7280;line-height:1.9;margin-bottom:16px">In Year 1, Akintoye leads the design of the M&amp;E framework for the Police Force engagement, manages the Research Associate, oversees budget compliance, and coordinates proof of concept implementation on the ground.</p>
+          <p style="font-size:.94rem;color:#6B7280;line-height:1.9">He also manages the Institute's Power BI dashboards for internal tracking — ensuring the organisation practises what it preaches when it comes to data-driven decision-making.</p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
-<section style="background:#111c33;padding:clamp(64px,8vw,96px) 0;text-align:center">
+<section style="background:#F3F4F6;padding:clamp(56px,7vw,80px) 0;text-align:center">
   <div class="wrap rv">
-    <p style="font-family:'Cormorant Garamond',serif;font-size:clamp(1.6rem,4vw,2.8rem);font-weight:300;color:#ffffff;margin-bottom:16px">We are a young institute.<br><em style="font-style:italic;color:#c9a84c">We are looking for collaborators.</em></p>
-    <p style="font-size:.9rem;color:rgba(255,255,255,.38);margin-bottom:32px;max-width:440px;margin-inline:auto">If you are a researcher working on crime, violence, peace, or gender in West Africa, we want to hear from you.</p>
-    <a href="contact.html" style="display:inline-flex;align-items:center;gap:7px;background:#c9a84c;color:#111c33;border-radius:100px;font-size:.88rem;font-weight:600;padding:14px 32px">Get in touch &rarr;</a>
+    <h2 style="font-size:clamp(1.5rem,4vw,2.2rem);font-weight:700;color:#111827;margin-bottom:12px">We are hiring a Research Associate</h2>
+    <p style="font-size:.92rem;color:#6B7280;margin-bottom:26px;max-width:460px;margin-inline:auto;line-height:1.8">6-month contract, May–October 2026. Remote/Lagos. Supporting research, communications, and project coordination. ₦180,000/month.</p>
+    <a href="contact.html" style="display:inline-block;background:#1E3A8A;color:#fff;border-radius:6px;font-family:'Montserrat',sans-serif;font-size:.84rem;font-weight:700;padding:12px 28px">Apply / Enquire →</a>
   </div>
 </section>
-<footer style="background:#111c33;padding:clamp(48px,6vw,72px) 0 20px">
-  <div class="wrap">
-    <div style="display:grid;grid-template-columns:1.8fr 1fr 1fr;gap:48px;margin-bottom:40px">
-      <div>
-        <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px">
-          <div style="width:32px;height:32px;border:1.5px solid #c9a84c;border-radius:5px;display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:.85rem;font-weight:700;color:#c9a84c">1864</div>
-          <span style="font-family:'Cormorant Garamond',serif;font-size:.9rem;font-weight:600;color:rgba(255,255,255,.65)">The 1864 Research &amp; Innovation Institute</span>
-        </div>
-        <p style="font-size:.78rem;color:rgba(255,255,255,.32);line-height:1.8;max-width:220px">Evidence-based research on crime, violence, peace, and gender in Nigeria and West Africa. Est. 2026.</p>
-      </div>
-      <div>
-        <h4 style="font-size:.62rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.22);margin-bottom:14px">Pages</h4>
-        <div style="display:flex;flex-direction:column;gap:9px">
-          <a href="index.html" style="font-size:.78rem;color:rgba(255,255,255,.38);transition:color .2s" onmouseover="this.style.color='#c9a84c'" onmouseout="this.style.color='rgba(255,255,255,.38)'">Home</a>
-          <a href="research.html" style="font-size:.78rem;color:rgba(255,255,255,.38);transition:color .2s" onmouseover="this.style.color='#c9a84c'" onmouseout="this.style.color='rgba(255,255,255,.38)'">Research</a>
-          <a href="team.html" style="font-size:.78rem;color:rgba(255,255,255,.38);transition:color .2s" onmouseover="this.style.color='#c9a84c'" onmouseout="this.style.color='rgba(255,255,255,.38)'">Team</a>
-          <a href="contact.html" style="font-size:.78rem;color:rgba(255,255,255,.38);transition:color .2s" onmouseover="this.style.color='#c9a84c'" onmouseout="this.style.color='rgba(255,255,255,.38)'">Contact</a>
-        </div>
-      </div>
-      <div>
-        <h4 style="font-size:.62rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.22);margin-bottom:14px">Contact</h4>
-        <p style="font-size:.78rem;color:rgba(255,255,255,.35);line-height:1.9">
-          Nigeria<br>
-          <a href="mailto:info@1864institute.org" style="color:rgba(255,255,255,.38)">info@1864institute.org</a>
-        </p>
-      </div>
-    </div>
-    <div style="border-top:1px solid rgba(255,255,255,.06);padding-top:18px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px">
-      <p style="font-size:.68rem;color:rgba(255,255,255,.18)">&copy; 2026 The 1864 Research &amp; Innovation Institute. All rights reserved.</p>
-    </div>
-  </div>
-</footer>
-<script>
-var ro=new IntersectionObserver(function(es){es.forEach(function(e){
-  if(!e.isIntersecting)return;
-  e.target.classList.add('in');ro.unobserve(e.target);
-});},{threshold:.08});
-document.querySelectorAll('.rv').forEach(function(el){ro.observe(el);});
-window.addEventListener('scroll',function(){
-  document.getElementById('nav').classList.toggle('sc',scrollY>60);
-});
-document.getElementById('nav').classList.toggle('sc',scrollY>60);
-</script>
+<footer style="background:#0F172A;padding:clamp(44px,6vw,68px) 0 22px"><div class="wrap"><div class="fg" style="display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:40px;margin-bottom:36px"><div><img src="images/logo_real.png" alt="1864" style="height:34px;width:auto;opacity:.85;margin-bottom:12px"><p style="font-size:.78rem;color:rgba(255,255,255,.32);line-height:1.9;max-width:220px">When government fails, the poorest pay the price. We fix the data systems that make government work.<br>Abuja, Nigeria. RC 9379383.</p></div><div><p style="font-family:'Montserrat',sans-serif;font-size:.58rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.2);margin-bottom:12px">Navigate</p><a href="index.html" style="display:block;font-size:.76rem;color:rgba(255,255,255,.36);margin-bottom:8px">Home</a><a href="approach.html" style="display:block;font-size:.76rem;color:rgba(255,255,255,.36);margin-bottom:8px">Our Approach</a><a href="projects.html" style="display:block;font-size:.76rem;color:rgba(255,255,255,.36);margin-bottom:8px">Projects</a><a href="blog.html" style="display:block;font-size:.76rem;color:rgba(255,255,255,.36);margin-bottom:8px">Insights</a><a href="team.html" style="display:block;font-size:.76rem;color:rgba(255,255,255,.36)">Team</a></div><div><p style="font-family:'Montserrat',sans-serif;font-size:.58rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.2);margin-bottom:12px">Work</p><a href="projects.html" style="display:block;font-size:.76rem;color:rgba(255,255,255,.36);margin-bottom:8px">Police Force POC</a><a href="approach.html" style="display:block;font-size:.76rem;color:rgba(255,255,255,.36);margin-bottom:8px">Methodology</a><a href="blog.html" style="display:block;font-size:.76rem;color:rgba(255,255,255,.36)">Publications</a></div><div><p style="font-family:'Montserrat',sans-serif;font-size:.58rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.2);margin-bottom:12px">Contact</p><a href="mailto:info@1864institute.org" style="display:block;font-size:.76rem;color:rgba(255,255,255,.36);margin-bottom:8px">info@1864institute.org</a><a href="mailto:abiola@1864institute.org" style="display:block;font-size:.76rem;color:rgba(255,255,255,.36)">abiola@1864institute.org</a></div></div><div style="border-top:1px solid rgba(255,255,255,.07);padding-top:18px"><p style="font-size:.65rem;color:rgba(255,255,255,.18)">&copy; 2026 The 1864 Research &amp; Innovation Institute. All rights reserved.</p></div></div></footer><script>var ro=new IntersectionObserver(function(es){es.forEach(function(e){if(!e.isIntersecting)return;e.target.classList.add("in");ro.unobserve(e.target);});},{threshold:.08});document.querySelectorAll(".rv").forEach(function(el){ro.observe(el);});</script>
 </body>
 </html>
