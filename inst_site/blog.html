@@ -3,101 +3,166 @@
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Insights. The 1864 Research &amp; Innovation Institute</title>
-<link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet"/><style>:root{--blue:#2C4C8A;--blue2:#1f3a6e;--dark:#111c33;--green:#059669;--green2:#047857;--gold:#F59E0B;--gold2:#D97706;--logo:#7291ca;--gray:#F3F4F6;--muted:#6B7280;--ink:#111827;}*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}body{font-family:'Open Sans',sans-serif;background:#fff;color:var(--ink);overflow-x:hidden;-webkit-font-smoothing:antialiased}a{text-decoration:none;color:inherit}img{display:block;max-width:100%}h1,h2,h3,h4{font-family:'Montserrat',sans-serif}.wrap{max-width:1200px;margin-inline:auto;padding-inline:clamp(20px,5vw,64px)}.rv{opacity:0;transform:translateY(20px);transition:opacity .6s,transform .6s}.rv.in{opacity:1;transform:none}#nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:0 clamp(20px,5vw,64px);height:70px;transition:background .4s}#nav.sc{background:rgba(17,28,51,.97);backdrop-filter:blur(20px);box-shadow:0 1px 0 rgba(255,255,255,.07)}.nav-links{display:flex;align-items:center;gap:22px}.nav-links a{font-family:'Montserrat',sans-serif;font-size:.76rem;font-weight:500;color:rgba(255,255,255,.55);transition:color .2s}.nav-links a:hover{color:#fff}.ncta{background:#059669!important;color:#fff!important;padding:8px 20px;border-radius:6px!important;font-weight:600!important}.ncta:hover{background:#047857!important}#burger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px}#burger span{display:block;width:22px;height:2px;background:rgba(255,255,255,.7);border-radius:2px}#mob{display:none;flex-direction:column;position:fixed;top:70px;left:0;right:0;z-index:199;background:rgba(17,28,51,.98);padding:8px 0 24px}#mob a{display:block;padding:13px 28px;font-family:'Montserrat',sans-serif;font-size:.86rem;font-weight:500;color:rgba(255,255,255,.6);border-bottom:1px solid rgba(255,255,255,.05)}#mob.open{display:flex!important}@media(max-width:860px){.nav-links{display:none}#burger{display:flex}}@media(max-width:720px){.g2{grid-template-columns:1fr!important;gap:40px!important}}@media(max-width:640px){.g3{grid-template-columns:1fr!important}}@media(max-width:860px){.fg{grid-template-columns:1fr 1fr!important;gap:28px!important}}@media(max-width:500px){.fg{grid-template-columns:1fr!important}}</style>
+<title>Insights — The 1864 Institute</title>
+<link rel="icon" type="image/x-icon" href="favicon.ico"/>
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon.png"/>
+<link rel="apple-touch-icon" href="images/apple-touch-icon.png"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet"/><style>
+:root{--blue:#2C4C8A;--dark:#111c33;--green:#059669;--gold:#F59E0B;--gray:#F3F4F6;--muted:#6B7280;--ink:#111827;}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Open Sans',sans-serif;background:#fff;color:var(--ink);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+a{text-decoration:none;color:inherit}img{display:block;max-width:100%}
+h1,h2,h3,h4{font-family:'Montserrat',sans-serif}
+.wrap{max-width:1100px;margin-inline:auto;padding-inline:clamp(20px,5vw,64px)}
+.rv{opacity:0;transform:translateY(20px);transition:opacity .6s,transform .6s}.rv.in{opacity:1;transform:none}
+#nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:center;
+  justify-content:space-between;padding:0 clamp(20px,5vw,64px);height:70px;transition:background .4s}
+#nav.sc{background:rgba(17,28,51,.97);backdrop-filter:blur(20px)}
+.nav-links{display:flex;align-items:center;gap:22px}
+.nav-links a{font-family:'Montserrat',sans-serif;font-size:.76rem;font-weight:500;color:rgba(255,255,255,.55);transition:color .2s}
+.nav-links a:hover{color:#fff}
+.ncta{background:#059669!important;color:#fff!important;padding:8px 20px;border-radius:6px!important;font-weight:600!important}
+#burger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px}
+#burger span{display:block;width:22px;height:2px;background:rgba(255,255,255,.7);border-radius:2px}
+#mob{display:none;flex-direction:column;position:fixed;top:70px;left:0;right:0;z-index:199;
+  background:rgba(17,28,51,.98);padding:8px 0 24px}
+#mob a{display:block;padding:13px 28px;font-family:'Montserrat',sans-serif;font-size:.86rem;
+  font-weight:500;color:rgba(255,255,255,.6);border-bottom:1px solid rgba(255,255,255,.05)}
+#mob.open{display:flex!important}
+.theme-bar{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}
+.theme-pill{font-family:'Montserrat',sans-serif;font-size:.6rem;font-weight:700;letter-spacing:.1em;
+  text-transform:uppercase;padding:5px 13px;border-radius:100px}
+.t-evidence{background:rgba(245,158,11,.12);color:#D97706}
+.t-tech{background:rgba(44,76,138,.1);color:#2C4C8A}
+.t-cocreate{background:rgba(5,150,105,.1);color:#059669}
+.niche-bar{background:#F3F4F6;border-left:3px solid var(--blue);padding:11px 16px;
+  font-family:'Montserrat',sans-serif;font-size:.78rem;font-weight:600;color:var(--blue);
+  border-radius:0 6px 6px 0;display:inline-block}
+@media(max-width:860px){.nav-links{display:none}#burger{display:flex}}
+@media(max-width:720px){.g2{grid-template-columns:1fr!important;gap:32px!important}}
+@media(max-width:640px){.g3{grid-template-columns:1fr!important}}
+@media(max-width:860px){.fg{grid-template-columns:1fr 1fr!important;gap:24px!important}}
+@media(max-width:500px){.fg{grid-template-columns:1fr!important}}
+</style>
 </head>
 <body>
-<nav id="nav"><a href="index.html"><img src="images/logo_transparent.png" alt="1864 Institute" style="height:40px;width:auto"></a><div class="nav-links"><a href="index.html" >Home</a><a href="approach.html" >Our Approach</a><a href="projects.html" >Projects</a><a href="blog.html" style='color:#fff'>Insights</a><a href="team.html" >Team</a><a href="contact.html" class="ncta">Work With Us</a></div><div id="burger" onclick="document.getElementById('mob').classList.toggle('open')"><span></span><span></span><span></span></div></nav><div id="mob"><a href="index.html">Home</a><a href="approach.html">Our Approach</a><a href="projects.html">Projects</a><a href="blog.html">Insights</a><a href="team.html">Team</a><a href="contact.html">Work With Us</a></div><script>window.addEventListener("scroll",function(){document.getElementById("nav").classList.toggle("sc",scrollY>60)});document.getElementById("nav").classList.toggle("sc",scrollY>60)</script>
+<nav id="nav"><a href="index.html"><img src="images/logo_transparent.png" alt="1864" style="height:40px;width:auto"></a><div class="nav-links"><a href="index.html" >Home</a><a href="approach.html" >Our Approach</a><a href="projects.html" >Projects</a><a href="blog.html" style='color:#fff'>Insights</a><a href="team.html" >Team</a><a href="contact.html" class="ncta">Work With Us</a></div><div id="burger" onclick="document.getElementById('mob').classList.toggle('open')"><span></span><span></span><span></span></div></nav><div id="mob"><a href="index.html">Home</a><a href="approach.html">Our Approach</a><a href="projects.html">Projects</a><a href="blog.html">Insights</a><a href="team.html">Team</a><a href="contact.html">Work With Us</a></div><script>window.addEventListener("scroll",function(){document.getElementById("nav").classList.toggle("sc",scrollY>60)});document.getElementById("nav").classList.toggle("sc",scrollY>60)</script>
 
-<section style="background:#111c33;padding:clamp(110px,12vw,150px) 0 clamp(60px,8vw,88px)">
+<section style="background:#111c33;padding:clamp(110px,12vw,150px) 0 clamp(60px,8vw,80px)">
   <div class="wrap"><div style="max-width:600px">
-    <p style="font-family:'Montserrat',sans-serif;font-size:.63rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:rgba(245,158,11,.8);margin-bottom:12px">Notes from the Field</p>
-    <h1 style="font-size:clamp(2.4rem,6vw,4.4rem);font-weight:800;line-height:1.0;letter-spacing:-.03em;color:#fff;margin-bottom:20px">Insights.</h1>
-    <p style="font-size:1rem;color:rgba(255,255,255,.48);line-height:1.85">Writing from Abiola Oyebanjo on government technology, data systems, and what it actually takes to make public institutions work better for the people they serve.</p>
+    <h1 style="font-size:clamp(2.2rem,6vw,4rem);font-weight:800;line-height:1.0;letter-spacing:-.03em;color:#fff;margin-bottom:16px">Thinking about data tools<br><span style="color:#F59E0B">that actually work.</span></h1>
+    <p style="font-size:.95rem;color:rgba(255,255,255,.48);line-height:1.85;margin-bottom:4px">Writing from Abiola Oyebanjo on evidence, simple technology, and co-creation inside Nigerian government institutions.</p>
+    <div class="theme-bar">
+  <span class="theme-pill t-evidence">Evidence</span>
+  <span class="theme-pill t-tech">Simple Tech</span>
+  <span class="theme-pill t-cocreate">Co-Creation</span>
+</div>
   </div></div>
 </section>
 
-<section style="background:#fff;padding:clamp(60px,8vw,96px) 0">
+<section style="background:#fff;padding:clamp(56px,8vw,88px) 0">
+  <div class="wrap" style="max-width:780px">
+
+    <article class="rv" style="padding:30px 0;border-bottom:1px solid #E5E7EB">
+      <div style="display:flex;gap:8px;margin-bottom:10px">
+        <span class="theme-pill t-evidence">Evidence</span>
+        <span class="theme-pill t-cocreate">Co-Creation</span>
+      </div>
+      <h2 style="font-family:'Montserrat',sans-serif;font-size:1.12rem;font-weight:700;color:#111827;line-height:1.2;margin-bottom:7px">Why we chose crime and violence as our first focus area</h2>
+      <p style="font-size:.87rem;color:#6B7280;line-height:1.75;margin-bottom:10px">The evidence gap is large, the problem is specific and solvable at the institutional level, and co-created data tools have the clearest potential to change frontline decisions.</p>
+      <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px">
+        <p style="font-size:.72rem;color:#9CA3AF">May 2026 &nbsp;·&nbsp; Abiola Oyebanjo</p>
+        <a href="blog/why-crime-and-violence.html" style="font-family:'Montserrat',sans-serif;font-size:.74rem;font-weight:600;color:#2C4C8A;border:1px solid #2C4C8A;padding:5px 13px;border-radius:6px">Read more</a>
+      </div>
+    </article>
+
+    <article class="rv" style="padding:30px 0;border-bottom:1px solid #E5E7EB">
+      <div style="display:flex;gap:8px;margin-bottom:10px">
+        <span class="theme-pill t-tech">Simple Tech</span>
+        <span class="theme-pill t-cocreate">Co-Creation</span>
+      </div>
+      <h2 style="font-family:'Montserrat',sans-serif;font-size:1.12rem;font-weight:700;color:#111827;line-height:1.2;margin-bottom:7px">What I have learned about government technology after years inside Nigerian public institutions</h2>
+      <p style="font-size:.87rem;color:#6B7280;line-height:1.75;margin-bottom:10px">Simple tech built with frontline workers outperforms complex software built for them. Every time. The reason most government technology fails is not technical.</p>
+      <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px">
+        <p style="font-size:.72rem;color:#9CA3AF">May 2026 &nbsp;·&nbsp; Abiola Oyebanjo</p>
+        <a href="blog/government-tech.html" style="font-family:'Montserrat',sans-serif;font-size:.74rem;font-weight:600;color:#2C4C8A;border:1px solid #2C4C8A;padding:5px 13px;border-radius:6px">Read more</a>
+      </div>
+    </article>
+
+    <article class="rv" style="padding:30px 0;border-bottom:1px solid #E5E7EB">
+      <div style="display:flex;gap:8px;margin-bottom:10px">
+        <span class="theme-pill t-evidence">Evidence</span>
+        <span class="theme-pill t-tech">Simple Tech</span>
+      </div>
+      <h2 style="font-family:'Montserrat',sans-serif;font-size:1.12rem;font-weight:700;color:#111827;line-height:1.2;margin-bottom:7px">Why Nigerian police commanders are making patrol decisions without data</h2>
+      <p style="font-size:.87rem;color:#6B7280;line-height:1.75;margin-bottom:10px">The evidence is already being collected. It just never travels from the logbook to the commander. Simple technology can close that gap.</p>
+      <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px">
+        <p style="font-size:.72rem;color:#9CA3AF">May 2026 &nbsp;·&nbsp; Abiola Oyebanjo</p>
+        <a href="blog/police-data-gap.html" style="font-family:'Montserrat',sans-serif;font-size:.74rem;font-weight:600;color:#2C4C8A;border:1px solid #2C4C8A;padding:5px 13px;border-radius:6px">Read more</a>
+      </div>
+    </article>
+
+    <article class="rv" style="padding:30px 0;border-bottom:1px solid #E5E7EB">
+      <div style="display:flex;gap:8px;margin-bottom:10px">
+        <span class="theme-pill t-evidence">Evidence</span>
+        <span class="theme-pill t-tech">Simple Tech</span>
+      </div>
+      <h2 style="font-family:'Montserrat',sans-serif;font-size:1.12rem;font-weight:700;color:#111827;line-height:1.2;margin-bottom:7px">The gender data gap: why institutions cannot respond to what they cannot see</h2>
+      <p style="font-size:.87rem;color:#6B7280;line-height:1.75;margin-bottom:10px">Simple additions to existing data systems surface gender-based disparities that were always there. Evidence made visible becomes evidence that can be acted on.</p>
+      <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px">
+        <p style="font-size:.72rem;color:#9CA3AF">April 2026 &nbsp;·&nbsp; Abiola Oyebanjo</p>
+        <a href="blog/gender-data-gap.html" style="font-family:'Montserrat',sans-serif;font-size:.74rem;font-weight:600;color:#2C4C8A;border:1px solid #2C4C8A;padding:5px 13px;border-radius:6px">Read more</a>
+      </div>
+    </article>
+
+    <article class="rv" style="padding:30px 0">
+      <div style="display:flex;gap:8px;margin-bottom:10px">
+        <span class="theme-pill t-evidence">Evidence</span>
+        <span class="theme-pill t-cocreate">Co-Creation</span>
+      </div>
+      <h2 style="font-family:'Montserrat',sans-serif;font-size:1.12rem;font-weight:700;color:#111827;line-height:1.2;margin-bottom:7px">Why I started the 1864 Institute</h2>
+      <p style="font-size:.87rem;color:#6B7280;line-height:1.75;margin-bottom:10px">Good evidence gathers dust when it is not co-created with the people who need to act on it. The 1864 Institute exists to close the gap between rigorous research and frontline decisions.</p>
+      <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px">
+        <p style="font-size:.72rem;color:#9CA3AF">April 2026 &nbsp;·&nbsp; Abiola Oyebanjo</p>
+        <a href="blog/why-we-started.html" style="font-family:'Montserrat',sans-serif;font-size:.74rem;font-weight:600;color:#2C4C8A;border:1px solid #2C4C8A;padding:5px 13px;border-radius:6px">Read more</a>
+      </div>
+    </article>
+
+  </div>
+</section>
+<footer style="background:#111c33;padding:clamp(44px,5vw,64px) 0 22px">
   <div class="wrap">
-
-    <article class="rv" style="padding:clamp(36px,5vw,60px) 0;border-bottom:1px solid #E5E7EB">
-      <div class="g2" style="display:grid;grid-template-columns:200px 1fr;gap:52px;align-items:start">
-        <div>
-          <span style="display:inline-block;background:rgba(44,76,138,.08);color:#2C4C8A;font-family:'Montserrat',sans-serif;font-size:.6rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:5px 12px;border-radius:100px;margin-bottom:14px">Government Tech</span>
-          <p style="font-size:.78rem;color:#6B7280;margin-bottom:3px">May 2026</p>
-          <p style="font-size:.78rem;font-weight:600;color:#374151">Abiola Oyebanjo</p>
-        </div>
-        <div>
-          <h2 style="font-family:'Montserrat',sans-serif;font-size:clamp(1.3rem,3vw,1.9rem);font-weight:700;color:#111827;line-height:1.15;margin-bottom:18px">What I have learned about government technology after years inside Nigerian public institutions</h2>
-          <p style="font-size:.95rem;color:#6B7280;line-height:1.9;margin-bottom:16px">I have spent a significant portion of my career working not on government from the outside, as a consultant or an academic, but from the inside, embedded within regulatory institutions and public agencies across Nigeria. What I have seen, repeatedly, is the same pattern: a technology project arrives, receives considerable fanfare, and is quietly abandoned within a year. The dashboard nobody looks at. The portal nobody uses. The system that requires three IT support calls to log in.</p>
-          <p style="font-size:.95rem;color:#6B7280;line-height:1.9;margin-bottom:16px">The reason is rarely the technology itself. The technology, usually, is fine. The reason is that the people who built it never spent time understanding how the institution actually works. They spoke to directors, not to the officers who would do the daily data entry. They designed for a hypothetical user in a stable environment, not for an officer on night shift with intermittent internet and no IT training.</p>
-          <p style="font-size:.95rem;color:#6B7280;line-height:1.9;margin-bottom:16px">There are three things I have observed consistently in the government technology projects that do work. First, they are built around tools people already know. Excel, WhatsApp, Google Forms. The learning curve is low enough that adoption happens naturally. Second, they are designed with the people who will use them, not presented to them after the fact. Third, they have internal champions: people within the institution whose job, informally, is to keep the system running and bring colleagues along.</p>
-          <p style="font-size:.95rem;color:#6B7280;line-height:1.9">The 1864 Institute was created to build exactly this kind of technology. Not the kind that impresses in a boardroom presentation and dies in the field. The kind that officers, teachers, and health workers actually open every morning because it makes their work easier. That is a harder thing to build. It is also the only thing worth building.</p>
+    <div class="fg" style="display:grid;grid-template-columns:2fr 1fr 1fr;gap:40px;margin-bottom:32px">
+      <div>
+        <img src="images/logo_transparent.png" alt="1864" style="height:32px;width:auto;margin-bottom:14px">
+        <p style="font-family:'Montserrat',sans-serif;font-size:.86rem;font-weight:700;color:#fff;margin-bottom:8px">Simple tools. Frontline workers. Daily decisions.</p>
+        <p style="font-size:.78rem;color:rgba(255,255,255,.32);line-height:1.8;margin-bottom:12px">Evidence. Simple tech. Co-creation.<br>Every project. Every tool. Every time.</p>
+        <div style="display:flex;gap:8px;flex-wrap:wrap">
+          <span style="font-family:'Montserrat',sans-serif;font-size:.56rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:4px 10px;border-radius:100px;background:rgba(245,158,11,.15);color:#F59E0B">Evidence</span>
+          <span style="font-family:'Montserrat',sans-serif;font-size:.56rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:4px 10px;border-radius:100px;background:rgba(44,76,138,.3);color:rgba(255,255,255,.6)">Simple Tech</span>
+          <span style="font-family:'Montserrat',sans-serif;font-size:.56rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:4px 10px;border-radius:100px;background:rgba(5,150,105,.2);color:#6EE7B7">Co-Creation</span>
         </div>
       </div>
-    </article>
-
-    <article class="rv" style="padding:clamp(36px,5vw,60px) 0;border-bottom:1px solid #E5E7EB">
-      <div class="g2" style="display:grid;grid-template-columns:200px 1fr;gap:52px;align-items:start">
-        <div>
-          <span style="display:inline-block;background:rgba(5,150,105,.08);color:#059669;font-family:'Montserrat',sans-serif;font-size:.6rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:5px 12px;border-radius:100px;margin-bottom:14px">Crime and Violence</span>
-          <p style="font-size:.78rem;color:#6B7280;margin-bottom:3px">May 2026</p>
-          <p style="font-size:.78rem;font-weight:600;color:#374151">Abiola Oyebanjo</p>
-        </div>
-        <div>
-          <h2 style="font-family:'Montserrat',sans-serif;font-size:clamp(1.3rem,3vw,1.9rem);font-weight:700;color:#111827;line-height:1.15;margin-bottom:18px">Why Nigerian police commanders are making patrol decisions without data, and what that costs communities</h2>
-          <p style="font-size:.95rem;color:#6B7280;line-height:1.9;margin-bottom:16px">In most Nigerian police divisions, the question of where to send patrols on a given night is answered by habit. Officers go where they have always gone. Commanders deploy based on institutional memory and personal intuition. Sometimes this works. Often it does not.</p>
-          <p style="font-size:.95rem;color:#6B7280;line-height:1.9;margin-bottom:16px">The data exists to make better decisions. Crime incident reports are filed every day. Complainant records are maintained. Arrest logs are kept. The problem is that this data sits in formats that make analysis impossible. Handwritten logbooks. Disconnected Excel files held on individual officers' laptops. Paper forms that are filed and never retrieved.</p>
-          <p style="font-size:.95rem;color:#6B7280;line-height:1.9;margin-bottom:16px">The consequence of this is not abstract. In a community where a particular street has become a hotspot for robbery, patrols may still be going to the street three blocks away, as they have for the past two years. The commander does not know about the hotspot because no one has looked at the data in a way that would reveal it. The community does not feel safe, trust in the police erodes, and incidents continue.</p>
-          <p style="font-size:.95rem;color:#6B7280;line-height:1.9">This is the gap the 1864 Institute exists to close. Not by building a sophisticated crime analysis platform that requires a data science team to operate, but by connecting the logbook to a simple dashboard that a commander can check on their phone. The data is already being collected. It just needs to travel twelve more inches to where decisions get made.</p>
-        </div>
+      <div>
+        <p style="font-family:'Montserrat',sans-serif;font-size:.58rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.2);margin-bottom:12px">Pages</p>
+        <a href="index.html" style="display:block;font-size:.76rem;color:rgba(255,255,255,.38);margin-bottom:8px">Home</a>
+        <a href="approach.html" style="display:block;font-size:.76rem;color:rgba(255,255,255,.38);margin-bottom:8px">Our Approach</a>
+        <a href="projects.html" style="display:block;font-size:.76rem;color:rgba(255,255,255,.38);margin-bottom:8px">Projects</a>
+        <a href="blog.html" style="display:block;font-size:.76rem;color:rgba(255,255,255,.38);margin-bottom:8px">Insights</a>
+        <a href="team.html" style="display:block;font-size:.76rem;color:rgba(255,255,255,.38)">Team</a>
       </div>
-    </article>
-
-    <article class="rv" style="padding:clamp(36px,5vw,60px) 0;border-bottom:1px solid #E5E7EB">
-      <div class="g2" style="display:grid;grid-template-columns:200px 1fr;gap:52px;align-items:start">
-        <div>
-          <span style="display:inline-block;background:rgba(245,158,11,.1);color:#D97706;font-family:'Montserrat',sans-serif;font-size:.6rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:5px 12px;border-radius:100px;margin-bottom:14px">Gender</span>
-          <p style="font-size:.78rem;color:#6B7280;margin-bottom:3px">April 2026</p>
-          <p style="font-size:.78rem;font-weight:600;color:#374151">Abiola Oyebanjo</p>
-        </div>
-        <div>
-          <h2 style="font-family:'Montserrat',sans-serif;font-size:clamp(1.3rem,3vw,1.9rem);font-weight:700;color:#111827;line-height:1.15;margin-bottom:18px">The gender data gap in Nigerian public services: why institutions cannot respond to what they cannot see</h2>
-          <p style="font-size:.95rem;color:#6B7280;line-height:1.9;margin-bottom:16px">One of the consistent findings in my research across Nigerian public institutions is that disaggregated data by gender is either not collected or not used. Service providers often do not know whether men and women are accessing their services at different rates, experiencing different outcomes, or facing different barriers. They are therefore unable to design responses to disparities that, from the aggregate data, are simply invisible.</p>
-          <p style="font-size:.95rem;color:#6B7280;line-height:1.9;margin-bottom:16px">This is not primarily a question of political will. Many of the institutions I have worked with genuinely want to serve women and men equitably. The problem is upstream: the data systems do not capture what is needed to understand inequality, and the people responsible for reporting have no mechanism or mandate to surface it.</p>
-          <p style="font-size:.95rem;color:#6B7280;line-height:1.9;margin-bottom:16px">Consider a public service that tracks the number of complaints received. If the complaint data is not disaggregated by gender, the institution cannot know whether women are underreporting, whether they face different types of problems, or whether they are being served less effectively. The aggregate number looks fine. The experience on the ground may be very different.</p>
-          <p style="font-size:.95rem;color:#6B7280;line-height:1.9">Part of what the 1864 Institute does in the gender area is work with institutions to build data collection practices that surface what was previously hidden. Not by adding complexity, but by asking, systematically, the questions that make inequality visible. Once you can see a problem in the data, responding to it becomes possible.</p>
-        </div>
+      <div>
+        <p style="font-family:'Montserrat',sans-serif;font-size:.58rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.2);margin-bottom:12px">Contact</p>
+        <a href="mailto:info@1864institute.org" style="display:block;font-size:.76rem;color:rgba(255,255,255,.38);margin-bottom:8px">info@1864institute.org</a>
+        <p style="font-size:.72rem;color:rgba(255,255,255,.18);margin-top:12px">RC 9379383 &nbsp;·&nbsp; Abuja, Nigeria</p>
       </div>
-    </article>
-
-    <article class="rv" style="padding:clamp(36px,5vw,60px) 0">
-      <div class="g2" style="display:grid;grid-template-columns:200px 1fr;gap:52px;align-items:start">
-        <div>
-          <span style="display:inline-block;background:rgba(44,76,138,.08);color:#2C4C8A;font-family:'Montserrat',sans-serif;font-size:.6rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:5px 12px;border-radius:100px;margin-bottom:14px">Evidence and Policy</span>
-          <p style="font-size:.78rem;color:#6B7280;margin-bottom:3px">April 2026</p>
-          <p style="font-size:.78rem;font-weight:600;color:#374151">Abiola Oyebanjo</p>
-        </div>
-        <div>
-          <h2 style="font-family:'Montserrat',sans-serif;font-size:clamp(1.3rem,3vw,1.9rem);font-weight:700;color:#111827;line-height:1.15;margin-bottom:18px">Why I started the 1864 Institute: on evidence, impact, and the frustration of watching good research gather dust</h2>
-          <p style="font-size:.95rem;color:#6B7280;line-height:1.9;margin-bottom:16px">The proximate reason I started the 1864 Institute is a frustration I have carried for some years. I have spent my career producing research that meets rigorous methodological standards. Peer-reviewed. Reproducible. Published. And I have watched, too often, as that research circulates within academic networks and never reaches the institutions that could act on it.</p>
-          <p style="font-size:.95rem;color:#6B7280;line-height:1.9;margin-bottom:16px">The research-to-policy gap is real, and in Nigeria it is wide. There are structural reasons for this. Institutions operate under immediate pressures and cannot always engage with the longer timelines of academic research. Researchers, trained to write for other researchers, often do not know how to make their findings legible to government audiences. The intermediary layer, the think tanks and policy labs that translate between the two, is thin.</p>
-          <p style="font-size:.95rem;color:#6B7280;line-height:1.9;margin-bottom:16px">But I also think there is something deeper. Research that is designed without a user in mind tends not to find one. When I look at the evidence work that does change things in Nigerian government, it is almost always produced by people who spent significant time inside the institutions they were studying. Who understood not just the policy problem but the operational reality. Who built relationships before they produced findings.</p>
-          <p style="font-size:.95rem;color:#6B7280;line-height:1.9">The 1864 Institute is my attempt to build something that is, from the start, designed to close that gap. Not research that eventually becomes policy, but work that is embedded in institutions as it is produced, and that leaves behind tools, systems, and people who can continue after the researcher has moved on. The name comes from 1864, a year of institutional formation in Nigerian history. The intent is to be part of what makes institutions work better, not just to document that they do not.</p>
-        </div>
-      </div>
-    </article>
-
+    </div>
+    <div style="border-top:1px solid rgba(255,255,255,.07);padding-top:16px">
+      <p style="font-size:.65rem;color:rgba(255,255,255,.18)">&copy; 2026 The 1864 Research &amp; Innovation Institute.</p>
+    </div>
   </div>
-</section>
-
-<section style="background:#2C4C8A;padding:clamp(56px,7vw,80px) 0;text-align:center">
-  <div class="wrap rv">
-    <h2 style="font-size:clamp(1.5rem,4vw,2.2rem);font-weight:700;color:#fff;margin-bottom:12px">Have a question or want to collaborate?</h2>
-    <p style="font-size:.9rem;color:rgba(255,255,255,.5);margin-bottom:24px;max-width:400px;margin-inline:auto;line-height:1.8">If you are working on related questions and want to connect, reach out directly.</p>
-    <a href="contact.html" style="display:inline-block;background:#F59E0B;color:#111827;border-radius:6px;font-family:'Montserrat',sans-serif;font-size:.84rem;font-weight:700;padding:12px 28px">Get in touch</a>
-  </div>
-</section>
-<footer style="background:#111c33;padding:clamp(44px,6vw,68px) 0 22px"><div class="wrap"><div class="fg" style="display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:40px;margin-bottom:36px"><div><img src="images/logo_transparent.png" alt="1864 Institute" style="height:34px;width:auto;margin-bottom:12px"><p style="font-size:.78rem;color:rgba(255,255,255,.35);line-height:1.9;max-width:240px">When government fails, the poorest pay the price. We fix the data systems that make government work.<br><br>Abuja, Nigeria. RC 9379383.</p></div><div><p style="font-family:'Montserrat',sans-serif;font-size:.58rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.2);margin-bottom:12px">Navigate</p><a href="index.html" style="display:block;font-size:.76rem;color:rgba(255,255,255,.38);margin-bottom:8px">Home</a><a href="approach.html" style="display:block;font-size:.76rem;color:rgba(255,255,255,.38);margin-bottom:8px">Our Approach</a><a href="projects.html" style="display:block;font-size:.76rem;color:rgba(255,255,255,.38);margin-bottom:8px">Projects</a><a href="blog.html" style="display:block;font-size:.76rem;color:rgba(255,255,255,.38);margin-bottom:8px">Insights</a><a href="team.html" style="display:block;font-size:.76rem;color:rgba(255,255,255,.38)">Team</a></div><div><p style="font-family:'Montserrat',sans-serif;font-size:.58rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.2);margin-bottom:12px">Focus Areas</p><a href="approach.html" style="display:block;font-size:.76rem;color:rgba(255,255,255,.38);margin-bottom:8px">Crime &amp; Violence</a><a href="approach.html" style="display:block;font-size:.76rem;color:rgba(255,255,255,.38);margin-bottom:8px">Gender</a><a href="approach.html" style="display:block;font-size:.76rem;color:rgba(255,255,255,.38)">Methodology</a></div><div><p style="font-family:'Montserrat',sans-serif;font-size:.58rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.2);margin-bottom:12px">Contact</p><a href="mailto:info@1864institute.org" style="display:block;font-size:.76rem;color:rgba(255,255,255,.38);margin-bottom:8px">info@1864institute.org</a><a href="mailto:abiola@1864institute.org" style="display:block;font-size:.76rem;color:rgba(255,255,255,.38)">abiola@1864institute.org</a></div></div><div style="border-top:1px solid rgba(255,255,255,.07);padding-top:18px"><p style="font-size:.65rem;color:rgba(255,255,255,.18)">&copy; 2026 The 1864 Research &amp; Innovation Institute. All rights reserved.</p></div></div></footer><script>var ro=new IntersectionObserver(function(es){es.forEach(function(e){if(!e.isIntersecting)return;e.target.classList.add("in");ro.unobserve(e.target);});},{threshold:.08});document.querySelectorAll(".rv").forEach(function(el){ro.observe(el);});</script>
+</footer>
+<script>var ro=new IntersectionObserver(function(es){es.forEach(function(e){if(!e.isIntersecting)return;e.target.classList.add("in");ro.unobserve(e.target);});},{threshold:.08});document.querySelectorAll(".rv").forEach(function(el){ro.observe(el);});</script>
 </body>
 </html>
