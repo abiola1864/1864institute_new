@@ -16,6 +16,7 @@
   --navy:#111c33;
   --gold:#F59E0B;
   --green:#059669;
+  --blue:#2C4C8A;
   --white:#fff;
   --offwhite:#F7F8FA;
   --ink:#0d1627;
@@ -93,21 +94,21 @@ h1,h2,h3,h4{font-family:'Montserrat',sans-serif}
   letter-spacing:.2em;text-transform:uppercase;color:var(--navy);margin-bottom:12px}
 .s3 h2{font-size:clamp(1.7rem,4vw,2.6rem);font-weight:800;color:var(--ink);
   letter-spacing:-.025em;max-width:600px;margin-bottom:48px;line-height:1.1}
-.s3-grid{display:grid;grid-template-columns:1fr 1fr;gap:0;
+.s3-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.s3-card{padding:clamp(28px,4vw,44px);background:var(--white);position:relative;
   border:1px solid #E4E8EF;border-radius:10px;overflow:hidden}
-.s3-card{padding:clamp(28px,4vw,44px);background:var(--white);position:relative}
-.s3-card+.s3-card{border-left:1px solid #E4E8EF}
 .s3-bar{position:absolute;top:0;left:0;width:100%;height:3px}
 .s3-bar-navy{background:var(--navy)}
 .s3-bar-gold{background:var(--gold)}
+.s3-bar-green{background:var(--green)}
+.s3-bar-blue{background:var(--blue)}
 .s3-num{font-family:'Montserrat',sans-serif;font-size:3rem;font-weight:900;
   color:#F0F2F5;line-height:1;margin-bottom:18px}
 .s3-card h3{font-size:1.05rem;font-weight:700;color:var(--ink);margin-bottom:10px}
 .s3-card p{font-size:.88rem;color:var(--mid);line-height:1.85;margin-bottom:18px}
 .s3-link{font-family:'Montserrat',sans-serif;font-size:.72rem;font-weight:600;color:var(--navy)}
 .s3-link:hover{color:var(--gold)}
-@media(max-width:600px){.s3-grid{grid-template-columns:1fr}
-  .s3-card+.s3-card{border-left:none;border-top:1px solid #E4E8EF}}
+@media(max-width:600px){.s3-grid{grid-template-columns:1fr}}
 
 /* SECTION 4. APPROACH. navy */
 .s4{background:var(--navy);padding:clamp(68px,9vw,104px) 0}
@@ -262,10 +263,10 @@ document.getElementById('nav').classList.toggle('sc',scrollY>50);
 <div style="background:var(--navy);border-bottom:1px solid rgba(255,255,255,.06)">
   <div class="wrap" style="padding-top:0;padding-bottom:0">
     <div style="display:grid;grid-template-columns:1fr 1fr 1fr;border-left:1px solid rgba(255,255,255,.06)">
-      <a href="blog/why-crime-and-violence.html" style="display:block;padding:28px 28px;border-right:1px solid rgba(255,255,255,.06);transition:background .2s" onmouseover="this.style.background='rgba(255,255,255,.03)'" onmouseout="this.style.background='transparent'">
+      <a href="blog/education-ai-labs.html" style="display:block;padding:28px 28px;border-right:1px solid rgba(255,255,255,.06);transition:background .2s" onmouseover="this.style.background='rgba(255,255,255,.03)'" onmouseout="this.style.background='transparent'">
         <p style="font-family:'Montserrat',sans-serif;font-size:.56rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-bottom:8px">Latest Blog</p>
-        <p style="font-family:'Montserrat',sans-serif;font-size:.84rem;font-weight:700;color:#fff;line-height:1.35;margin-bottom:6px">Why we chose crime and violence as our first focus area</p>
-        <p style="font-size:.72rem;color:rgba(255,255,255,.32)">May 2026 &nbsp;·&nbsp; Abiola Oyebanjo</p>
+        <p style="font-family:'Montserrat',sans-serif;font-size:.84rem;font-weight:700;color:#fff;line-height:1.35;margin-bottom:6px">Bringing learning to students who cannot be in class all day</p>
+        <p style="font-size:.72rem;color:rgba(255,255,255,.32)">July 2026 &nbsp;·&nbsp; Abiola Oyebanjo</p>
       </a>
       <a href="https://www.hrw.org/world-report/2026/country-chapters/nigeria" target="_blank" rel="noopener" style="display:block;padding:28px 28px;border-right:1px solid rgba(255,255,255,.06);transition:background .2s" onmouseover="this.style.background='rgba(255,255,255,.03)'" onmouseout="this.style.background='transparent'">
         <p style="font-family:'Montserrat',sans-serif;font-size:.56rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--green);margin-bottom:8px">Latest News</p>
@@ -294,14 +295,28 @@ document.getElementById('nav').classList.toggle('sc',scrollY>50);
         <div class="s3-num">01</div>
         <h3>Crime, Violence &amp; Peace</h3>
         <p>Officers log crimes in notebooks. Commanders guess where to send patrols. The data that could guide better decisions never reaches them.</p>
-        <a href="blog/why-crime-and-violence.html" class="s3-link">Why this is our focus →</a>
+        <a href="blog/why-crime-and-violence.html" class="s3-link">Read more →</a>
       </div>
       <div class="s3-card">
         <div class="s3-bar s3-bar-gold"></div>
-        <div class="s3-num" style="color:#F7F8FA">02</div>
+        <div class="s3-num">02</div>
         <h3>Gender</h3>
-        <p>Institutions collect service data but never disaggregate it. Gender-based disparities are invisible in the aggregate, so nothing gets done about them.</p>
+        <p>Institutions collect service data but never disaggregate it. Gender based disparities stay invisible in the aggregate, so nothing gets done about them.</p>
         <a href="blog/gender-data-gap.html" class="s3-link">Read more →</a>
+      </div>
+      <div class="s3-card">
+        <div class="s3-bar s3-bar-green"></div>
+        <div class="s3-num">03</div>
+        <h3>Social Protection</h3>
+        <p>The institutions that hold citizen records and the ones that deliver support rarely connect. People who qualify for help fall through the gaps between them.</p>
+        <a href="blog/social-protection.html" class="s3-link">Read more →</a>
+      </div>
+      <div class="s3-card">
+        <div class="s3-bar s3-bar-blue"></div>
+        <div class="s3-num">04</div>
+        <h3>Education</h3>
+        <p>Many secondary students miss class for farm work and other duties. They fall behind on the curriculum and have no way to catch up on their own time.</p>
+        <a href="blog/education-ai-labs.html" class="s3-link">Read more →</a>
       </div>
     </div>
   </div>
@@ -341,15 +356,15 @@ document.getElementById('nav').classList.toggle('sc',scrollY>50);
 <section class="s5">
   <div class="wrap">
     <div class="rv">
-      <p class="s5-label">Our focus · 2026–2027</p>
-      <h2>Two areas. Two years of focused work.</h2>
+      <p class="s5-label">What we focus on</p>
+      <h2>Four focus areas. One way of working.</h2>
     </div>
     <div class="s5-cards">
       <div class="s5-dark rv">
         <div class="s5-deco">01</div>
         <p class="s5-label" style="color:rgba(245,158,11,.55);margin-bottom:14px">Crime, Violence &amp; Peace</p>
         <h3>How do security institutions use data to make better frontline decisions?</h3>
-        <p>We work with Nigerian security institutions to build simple tools that get crime evidence from the officer on the ground to the commander making patrol decisions. co-designed, sustainable, and measurable.</p>
+        <p>We work with Nigerian security institutions to build simple tools that move crime evidence from the officer on the ground to the commander making patrol decisions. Co-designed, sustainable, and measurable.</p>
         <a href="blog/why-crime-and-violence.html">Why we chose this focus →</a>
       </div>
       <div class="s5-light rv">
@@ -358,6 +373,20 @@ document.getElementById('nav').classList.toggle('sc',scrollY>50);
         <h3>Where are the data gaps that make gender disparities invisible?</h3>
         <p>Simple additions to existing data collection surface what was always there but never seen. Once institutions can see a disparity in the data, responding to it becomes possible.</p>
         <a href="blog/gender-data-gap.html">Read more →</a>
+      </div>
+      <div class="s5-dark rv">
+        <div class="s5-deco">03</div>
+        <p class="s5-label" style="color:rgba(245,158,11,.55);margin-bottom:14px">Social Protection</p>
+        <h3>How do you make sure support reaches the people who actually qualify for it?</h3>
+        <p>The systems that register citizens and the systems that deliver benefits rarely talk to each other. We are designing a simple coordination layer that lets institutions confirm who qualifies and route support to them, without moving sensitive data out of the agencies that already hold it.</p>
+        <a href="blog/social-protection.html">Read more →</a>
+      </div>
+      <div class="s5-light rv">
+        <div class="s5-deco">04</div>
+        <p class="s5-label" style="color:var(--green);margin-bottom:14px">Education</p>
+        <h3>How do students keep learning when they cannot be in class all day?</h3>
+        <p>Many secondary students miss school for farm work and other duties, and fall behind on the curriculum. We are designing AI supported learning labs where students use games to catch up on what they missed and keep learning on their own schedule, built with the Ministry of Education and its agencies.</p>
+        <a href="blog/education-ai-labs.html">Read more →</a>
       </div>
     </div>
   </div>
@@ -371,32 +400,32 @@ document.getElementById('nav').classList.toggle('sc',scrollY>50);
       <a href="insights.html">View all →</a>
     </div>
     <div class="s6-grid rv">
-      <a href="blog/why-crime-and-violence.html" class="s6-feat" style="display:flex">
+      <a href="blog/social-protection.html" class="s6-feat" style="display:flex">
         <div class="s6-fi">
-          <p class="s6-ftag">Blog · Evidence · Co-Creation</p>
-          <p class="s6-ftitle">Why we chose crime and violence as our first focus area</p>
-          <p class="s6-fexc">The evidence gap is large, the problem is specific, and co-created data tools can change daily decisions in security institutions.</p>
-          <p class="s6-fmeta">May 2026 · Abiola Oyebanjo</p>
+          <p class="s6-ftag">Blog · Social Protection</p>
+          <p class="s6-ftitle">Social protection fails at the seams between institutions</p>
+          <p class="s6-fexc">The support exists. The systems that decide who receives it and the systems that deliver it rarely connect. A simple coordination layer can close that gap.</p>
+          <p class="s6-fmeta">July 2026 · Abiola Oyebanjo</p>
           <span class="s6-fbtn">Read post →</span>
         </div>
       </a>
       <div class="s6-stack">
+        <a href="blog/education-ai-labs.html" class="s6-item">
+          <span class="s6-itag t-blog">Blog</span>
+          <p class="s6-ititle">Bringing learning to students who cannot be in class all day</p>
+          <p class="s6-imeta">July 2026 · Abiola Oyebanjo</p>
+          <span class="s6-ilink">Read →</span>
+        </a>
+        <a href="blog/why-crime-and-violence.html" class="s6-item">
+          <span class="s6-itag t-blog">Blog</span>
+          <p class="s6-ititle">Why we chose crime and violence as an early focus area</p>
+          <p class="s6-imeta">May 2026 · Abiola Oyebanjo</p>
+          <span class="s6-ilink">Read →</span>
+        </a>
         <a href="https://www.hrw.org/world-report/2026/country-chapters/nigeria" target="_blank" rel="noopener" class="s6-item">
           <span class="s6-itag t-news">News</span>
           <p class="s6-ititle">HRW 2026: Nigeria's security forces face persistent accountability gaps</p>
           <p class="s6-imeta">Feb 2026 · Human Rights Watch</p>
-          <span class="s6-ilink">Read →</span>
-        </a>
-        <a href="https://journals.sagepub.com/doi/10.1177/00219096241235307" target="_blank" rel="noopener" class="s6-item">
-          <span class="s6-itag t-research">Research</span>
-          <p class="s6-ititle">Gender inequality in the Nigerian civil service: evidence from Abuja</p>
-          <p class="s6-imeta">2025 · SAGE Journals</p>
-          <span class="s6-ilink">Read →</span>
-        </a>
-        <a href="blog/government-tech.html" class="s6-item">
-          <span class="s6-itag t-blog">Blog</span>
-          <p class="s6-ititle">What I have learned about government technology inside Nigerian institutions</p>
-          <p class="s6-imeta">May 2026 · Abiola Oyebanjo</p>
           <span class="s6-ilink">Read →</span>
         </a>
       </div>

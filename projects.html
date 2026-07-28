@@ -80,6 +80,13 @@ footer{background:var(--dark);padding:clamp(52px,7vw,80px) 0 24px;border-top:1px
 .section-head{margin-bottom:48px}
 .section-head .label{margin-bottom:12px}
 .section-head h2{font-size:clamp(1.6rem,4vw,2.4rem);font-weight:800;letter-spacing:-.02em}
+.focus-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.focus-card{background:#fff;border:1px solid #E4E8EF;border-radius:10px;padding:clamp(24px,3vw,32px);position:relative;overflow:hidden}
+.focus-bar{position:absolute;top:0;left:0;width:100%;height:3px}
+.focus-card h3{font-size:1.02rem;font-weight:700;color:var(--ink);margin-bottom:9px}
+.focus-card p{font-size:.86rem;color:var(--mid);line-height:1.8}
+.focus-tag{font-family:'Montserrat',sans-serif;font-size:.58rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:12px}
+@media(max-width:640px){.focus-grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -98,8 +105,8 @@ footer{background:var(--dark);padding:clamp(52px,7vw,80px) 0 24px;border-top:1px
 <section class="page-hero">
   <div class="wrap rv"><div class="ph-rule"></div>
     <p class="ph-label">Our Work</p>
-    <h1 class="ph-h1">One institution.<br>One proof of concept.<br><em>Done right.</em></h1>
-    <p class="ph-sub">We are in our founding phase, scoping our first institutional engagement. One well-documented proof of concept that demonstrates impact creates the evidence base for everything that follows.</p>
+    <h1 class="ph-h1">Four focus areas.<br>One proof of concept<br><em>at a time.</em></h1>
+    <p class="ph-sub">We work across crime and public safety, gender, social protection, and education. We are in our founding phase, scoping our first institutional engagement. One well-documented proof of concept that demonstrates impact creates the evidence base for everything that follows.</p>
   </div>
 </section>
 
@@ -132,6 +139,41 @@ footer{background:var(--dark);padding:clamp(52px,7vw,80px) 0 24px;border-top:1px
         <div style="margin-top:20px;padding-top:20px;border-top:1px solid #E5E7EB">
           <a href="approach.html" class="btn-p" style="font-size:.74rem;padding:9px 20px">Full methodology →</a>
         </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-gray">
+  <div class="wrap">
+    <div class="section-head rv">
+      <p class="label" style="color:var(--blue)">Where we work</p>
+      <h2>Four focus areas</h2>
+    </div>
+    <div class="focus-grid rv">
+      <div class="focus-card">
+        <div class="focus-bar" style="background:var(--navy)"></div>
+        <p class="focus-tag">01 · Crime, Violence &amp; Peace</p>
+        <h3>Better frontline security decisions</h3>
+        <p>Getting crime evidence from the officer on the ground to the commander deciding where to send patrols.</p>
+      </div>
+      <div class="focus-card">
+        <div class="focus-bar" style="background:var(--gold)"></div>
+        <p class="focus-tag">02 · Gender</p>
+        <h3>Making disparities visible</h3>
+        <p>Surfacing the gender based disparities that existing data collection leaves invisible in the aggregate.</p>
+      </div>
+      <div class="focus-card">
+        <div class="focus-bar" style="background:var(--green)"></div>
+        <p class="focus-tag">03 · Social Protection</p>
+        <h3>Support that reaches the right people</h3>
+        <p>Helping institutions confirm who qualifies for support and route it to them, without moving sensitive data out of the agencies that hold it.</p>
+      </div>
+      <div class="focus-card">
+        <div class="focus-bar" style="background:var(--blue)"></div>
+        <p class="focus-tag">04 · Education</p>
+        <h3>Learning that fits a student's day</h3>
+        <p>AI supported learning labs where students use games to catch up on the curriculum they miss, built with the Ministry of Education and its agencies.</p>
       </div>
     </div>
   </div>
