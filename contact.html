@@ -19,11 +19,9 @@ h1,h2,h3,h4{font-family:'Montserrat',sans-serif;line-height:1.1}
 .wrap{max-width:1160px;margin-inline:auto;padding-inline:clamp(20px,5vw,60px)}
 .label{font-family:'Montserrat',sans-serif;font-size:.6rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase}
 .rv{opacity:0;transform:translateY(24px);transition:opacity .65s,transform .65s}.rv.in{opacity:1;transform:none}
-.rv2{opacity:0;transform:translateY(24px);transition:opacity .65s .12s,transform .65s .12s}.rv2.in{opacity:1;transform:none}
 #nav{position:fixed;top:0;left:0;right:0;z-index:300;height:68px;display:flex;align-items:center;
   justify-content:space-between;padding:0 clamp(20px,5vw,60px);transition:all .35s}
 #nav.sc{background:rgba(13,22,39,.96);backdrop-filter:blur(24px);box-shadow:0 1px 0 rgba(255,255,255,.06)}
-.nav-logo img{height:38px;width:auto}
 .nav-links{display:flex;align-items:center;gap:20px}
 .nav-links a{font-family:'Montserrat',sans-serif;font-size:.72rem;font-weight:500;
   color:rgba(255,255,255,.5);transition:color .2s}
@@ -40,9 +38,8 @@ h1,h2,h3,h4{font-family:'Montserrat',sans-serif;line-height:1.1}
   font-size:.85rem;font-weight:500;color:rgba(255,255,255,.55);border-bottom:1px solid rgba(255,255,255,.04)}
 #mob.open{display:flex!important}
 @media(max-width:860px){.nav-links{display:none}#burger{display:flex}}
-@media(max-width:720px){.g2{grid-template-columns:1fr!important;gap:32px!important}}
+@media(max-width:760px){.g2{grid-template-columns:1fr!important;gap:32px!important}.foot-grid{grid-template-columns:1fr 1fr!important;gap:28px!important}}
 @media(max-width:640px){.g3{grid-template-columns:1fr!important}}
-@media(max-width:760px){.foot-grid{grid-template-columns:1fr 1fr!important;gap:28px!important}}
 footer{background:var(--dark);padding:clamp(52px,7vw,80px) 0 24px;border-top:1px solid rgba(255,255,255,.04)}
 .foot-grid{display:grid;grid-template-columns:1.8fr 1fr 1fr;gap:48px;margin-bottom:40px}
 .foot-hl{font-family:'Montserrat',sans-serif;font-size:.56rem;font-weight:700;
@@ -51,12 +48,6 @@ footer{background:var(--dark);padding:clamp(52px,7vw,80px) 0 24px;border-top:1px
 .foot-link:hover{color:var(--gold)}
 .foot-bottom{border-top:1px solid rgba(255,255,255,.06);padding-top:18px}
 .foot-copy{font-size:.62rem;color:rgba(255,255,255,.18)}
-.btn-p{background:var(--blue);color:#fff;border-radius:5px;font-family:'Montserrat',sans-serif;
-  font-size:.78rem;font-weight:600;padding:12px 26px;display:inline-block;transition:background .2s}
-.btn-p:hover{background:var(--blue-mid)}
-.btn-g{background:var(--green);color:#fff;border-radius:5px;font-family:'Montserrat',sans-serif;
-  font-size:.78rem;font-weight:600;padding:12px 26px;display:inline-block;transition:background .2s}
-.btn-g:hover{background:#047857}
 .page-hero{background:var(--dark);padding:clamp(120px,14vw,160px) 0 clamp(56px,7vw,80px);position:relative;overflow:hidden}
 .page-hero::after{content:'';position:absolute;bottom:0;left:0;right:0;height:1px;
   background:linear-gradient(to right,transparent,rgba(245,158,11,.25),transparent)}
@@ -64,22 +55,23 @@ footer{background:var(--dark);padding:clamp(52px,7vw,80px) 0 24px;border-top:1px
 .ph-label{font-family:'Montserrat',sans-serif;font-size:.6rem;font-weight:700;letter-spacing:.2em;
   text-transform:uppercase;color:rgba(245,158,11,.6);margin-bottom:14px}
 .ph-h1{font-size:clamp(2.2rem,6vw,4rem);font-weight:900;color:#fff;letter-spacing:-.03em;margin-bottom:16px}
-.ph-h1 em{font-style:normal;color:var(--gold)}
 .ph-sub{font-size:.95rem;color:rgba(255,255,255,.42);line-height:1.85;max-width:540px}
-.cta-strip{background:var(--blue);padding:clamp(52px,7vw,80px) 0;text-align:center;position:relative;overflow:hidden}
-.cta-strip::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(245,158,11,.1),transparent 65%)}
-.cta-strip h2{font-size:clamp(1.5rem,4vw,2.4rem);font-weight:800;color:#fff;margin-bottom:10px;position:relative}
-.cta-strip p{font-size:.9rem;color:rgba(255,255,255,.48);margin-bottom:24px;max-width:360px;
-  margin-inline:auto;line-height:1.8;position:relative}
-.cta-strip a{position:relative;display:inline-block;background:var(--gold);color:var(--ink);
-  border-radius:5px;font-family:'Montserrat',sans-serif;font-size:.82rem;font-weight:700;
-  padding:12px 30px}
-.section-white{background:#fff;padding:clamp(64px,9vw,100px) 0}
-.section-gray{background:var(--gray);padding:clamp(64px,9vw,100px) 0}
-.section-dark{background:var(--navy);padding:clamp(64px,9vw,100px) 0}
-.section-head{margin-bottom:48px}
+.section-white{background:#fff;padding:clamp(56px,8vw,92px) 0}
+.section-gray{background:var(--gray);padding:clamp(56px,8vw,92px) 0}
+.section-head{margin-bottom:44px}
 .section-head .label{margin-bottom:12px}
-.section-head h2{font-size:clamp(1.6rem,4vw,2.4rem);font-weight:800;letter-spacing:-.02em}
+.section-head h2{font-size:clamp(1.5rem,3.5vw,2.2rem);font-weight:800;letter-spacing:-.02em;color:var(--ink)}
+.contact-card{border:1px solid #E4E8EF;border-radius:12px;padding:28px 30px;transition:box-shadow .2s}
+.contact-card:hover{box-shadow:0 8px 28px rgba(13,22,39,.07)}
+.cc-ico{width:40px;height:40px;border-radius:9px;background:var(--navy);display:flex;align-items:center;justify-content:center;margin-bottom:16px}
+.cc-label{font-family:'Montserrat',sans-serif;font-size:.58rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+.cc-mail{font-family:'Montserrat',sans-serif;font-size:.98rem;font-weight:700;color:var(--ink)}
+.cc-mail:hover{color:var(--green)}
+.look-card{background:#fff;border:1px solid #E4E8EF;border-radius:12px;padding:clamp(24px,3vw,30px);position:relative;overflow:hidden}
+.look-bar{position:absolute;top:0;left:0;width:100%;height:3px}
+.look-card h3{font-size:1.02rem;font-weight:700;color:var(--ink);margin-bottom:10px}
+.look-card p{font-size:.88rem;color:var(--mid);line-height:1.8;margin-bottom:14px}
+.look-more{font-family:'Montserrat',sans-serif;font-size:.72rem;font-weight:600;color:var(--blue)}
 </style>
 </head>
 <body>
@@ -88,11 +80,10 @@ footer{background:var(--dark);padding:clamp(52px,7vw,80px) 0 24px;border-top:1px
     <img src="images/logo_transparent.png" alt="1864" style="height:38px;width:auto">
     <span style="font-family:'Montserrat',sans-serif;font-size:.72rem;font-weight:700;color:rgba(255,255,255,.7);line-height:1.25;letter-spacing:.01em">The 1864 Research<br>&amp; Innovation Institute</span>
   </a>
-  <div class="nav-links"><a href="index.html" >Home</a><a href="about.html" >About</a><a href="approach.html" >Our Approach</a><a href="projects.html" >Projects</a><a href="insights.html" >Insights</a><a href="team.html" >Team</a><a href="contact.html" class="nav-cta">Work With Us</a></div>
+  <div class="nav-links"><a href="index.html">Home</a><a href="about.html">About</a><a href="approach.html">Our Approach</a><a href="projects.html">Projects</a><a href="insights.html">Insights</a><a href="team.html">Team</a><a href="contact.html" class="nav-cta">Work With Us</a></div>
   <div id="burger" onclick="document.getElementById('mob').classList.toggle('open')"><span></span><span></span><span></span></div>
 </nav>
-<div id="mob"><a href="index.html">Home</a>
-    <a href="about.html">About</a><a href="approach.html">Our Approach</a><a href="projects.html">Projects</a><a href="insights.html">Insights</a><a href="team.html">Team</a><a href="contact.html">Work With Us</a></div>
+<div id="mob"><a href="index.html">Home</a><a href="about.html">About</a><a href="approach.html">Our Approach</a><a href="projects.html">Projects</a><a href="insights.html">Insights</a><a href="team.html">Team</a><a href="contact.html">Work With Us</a></div>
 <script>window.addEventListener('scroll',function(){document.getElementById('nav').classList.toggle('sc',scrollY>50)});document.getElementById('nav').classList.toggle('sc',scrollY>50)</script>
 
 <section class="page-hero">
@@ -105,54 +96,64 @@ footer{background:var(--dark);padding:clamp(52px,7vw,80px) 0 24px;border-top:1px
 
 <section class="section-white">
   <div class="wrap">
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:56px" class="g2 rv">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center" class="g2 rv">
       <div>
-        <h2 style="font-size:1.4rem;font-weight:800;color:var(--ink);margin-bottom:20px;letter-spacing:-.01em">Get in touch</h2>
-        <div style="display:flex;flex-direction:column;gap:18px;margin-bottom:28px">
-          <div style="display:flex;gap:14px;align-items:flex-start">
-            <div style="width:36px;height:36px;background:var(--blue);border-radius:7px;display:flex;align-items:center;justify-content:center;flex-shrink:0;color:#fff;font-size:.85rem">✉</div>
-            <div><p style="font-family:'Montserrat',sans-serif;font-size:.6rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);margin-bottom:3px">General</p>
-              <a href="mailto:info@1864institute.org" style="font-size:.9rem;font-weight:600;color:var(--blue)">info@1864institute.org</a></div>
+        <p class="label" style="color:var(--blue);margin-bottom:20px">Get in touch</p>
+        <div style="display:flex;flex-direction:column;gap:16px">
+          <div class="contact-card">
+            <div class="cc-ico"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 5L2 7"/></svg></div>
+            <p class="cc-label">General</p>
+            <a href="mailto:info@1864institute.org" class="cc-mail">info@1864institute.org</a>
           </div>
-          <div style="display:flex;gap:14px;align-items:flex-start">
-            <div style="width:36px;height:36px;background:var(--green);border-radius:7px;display:flex;align-items:center;justify-content:center;flex-shrink:0;color:#fff;font-size:.85rem">✉</div>
-            <div><p style="font-family:'Montserrat',sans-serif;font-size:.6rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);margin-bottom:3px">Executive Director</p>
-              <a href="mailto:info@1864institute.org" style="font-size:.9rem;font-weight:600;color:var(--green)">info@1864institute.org</a></div>
+          <div class="contact-card">
+            <div class="cc-ico"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 5L2 7"/></svg></div>
+            <p class="cc-label">Executive Director</p>
+            <a href="mailto:abiola@1864institute.org" class="cc-mail">abiola@1864institute.org</a>
           </div>
-        </div>
-        <div style="background:var(--gray);border-radius:10px;padding:20px 22px;border-left:3px solid var(--gold)">
-          <p style="font-family:'Montserrat',sans-serif;font-size:.72rem;font-weight:700;color:var(--ink);margin-bottom:6px">Evidence. Simple tech. Co-creation.</p>
-          <p style="font-size:.82rem;color:var(--mid);line-height:1.7">Every partnership we take on must embody all three. If your institution is ready to work that way, we want to hear from you.</p>
         </div>
       </div>
       <div>
-        <h2 style="font-size:1.4rem;font-weight:800;color:var(--ink);margin-bottom:20px;letter-spacing:-.01em">We are looking for</h2>
-        <div style="display:flex;flex-direction:column;gap:12px">
-          <div style="border:1px solid #E5E7EB;border-radius:10px;padding:18px 20px;border-left:3px solid var(--blue)">
-            <h4 style="font-size:.88rem;font-weight:700;color:var(--ink);margin-bottom:5px">Government partner institutions</h4>
-            <p style="font-size:.82rem;color:var(--mid);line-height:1.7">Agencies working on crime, safety, or gender with data they collect but cannot use to improve frontline decisions.</p>
-          </div>
-          <div style="border:1px solid #E5E7EB;border-radius:10px;padding:18px 20px;border-left:3px solid var(--gold)">
-            <h4 style="font-size:.88rem;font-weight:700;color:var(--ink);margin-bottom:5px">Funders</h4>
-            <p style="font-size:.82rem;color:var(--mid);line-height:1.7">Aligned with building simple, evidence-based data capacity inside Nigerian public institutions.</p>
-          </div>
-          <div style="border:1px solid #E5E7EB;border-radius:10px;padding:18px 20px;border-left:3px solid var(--green)">
-            <h4 style="font-size:.88rem;font-weight:700;color:var(--ink);margin-bottom:5px">Research Associate</h4>
-            <p style="font-size:.82rem;color:var(--mid);line-height:1.7;margin-bottom:10px">6-month contract. Abuja. Starting July 2026. N200,000 to N250,000 per month.</p>
-            <a href="jobs.html" style="font-family:'Montserrat',sans-serif;font-size:.76rem;font-weight:600;color:#059669;display:inline-flex;align-items:center;gap:4px">View position and apply →</a>
-          </div>
-        </div>
+        <h2 style="font-size:clamp(1.4rem,3vw,2rem);font-weight:800;color:var(--ink);margin-bottom:14px;letter-spacing:-.02em">Evidence. Simple tech. Co-creation.</h2>
+        <p style="font-size:.95rem;color:var(--mid);line-height:1.9">Every partnership we take on must embody all three. If your institution is ready to work that way, we want to hear from you.</p>
       </div>
     </div>
   </div>
 </section>
+
+<section class="section-gray">
+  <div class="wrap">
+    <div class="section-head rv">
+      <p class="label" style="color:var(--blue)">Who we work with</p>
+      <h2>We are looking for</h2>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px" class="g3 rv">
+      <div class="look-card">
+        <div class="look-bar" style="background:var(--gold)"></div>
+        <h3>Government partner institutions</h3>
+        <p>Agencies working on crime and safety, gender, social protection, or education, with data they collect but cannot use to improve frontline decisions.</p>
+      </div>
+      <div class="look-card">
+        <div class="look-bar" style="background:var(--green)"></div>
+        <h3>Funders</h3>
+        <p>Aligned with building simple, evidence-based data capacity inside Nigerian public institutions.</p>
+      </div>
+      <div class="look-card">
+        <div class="look-bar" style="background:var(--blue-mid)"></div>
+        <h3>People to work with us</h3>
+        <p>We have open roles right now. See the current positions and how to apply.</p>
+        <a href="jobs.html" class="look-more">View open roles →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
 <footer>
   <div class="wrap">
     <div class="foot-grid">
       <div>
         <img src="images/logo_transparent.png" alt="1864" style="height:30px;width:auto;margin-bottom:14px">
         <p style="font-family:'Montserrat',sans-serif;font-size:.82rem;font-weight:700;color:#fff;margin-bottom:6px">Informed public servants. Better services for those who need them most.</p>
-        <p style="font-size:.74rem;color:rgba(255,255,255,.28);line-height:1.8">Evidence. Simple technology. Co-creation.<br>Abuja, Nigeria </p>
+        <p style="font-size:.74rem;color:rgba(255,255,255,.28);line-height:1.8">Evidence. Simple technology. Co-creation.<br>Abuja, Nigeria</p>
       </div>
       <div>
         <p class="foot-hl">Navigate</p>
@@ -165,7 +166,7 @@ footer{background:var(--dark);padding:clamp(52px,7vw,80px) 0 24px;border-top:1px
       <div>
         <p class="foot-hl">Contact</p>
         <a href="mailto:info@1864institute.org" class="foot-link">info@1864institute.org</a>
-        <a href="mailto:info@1864institute.org" class="foot-link">info@1864institute.org</a>
+        <a href="mailto:abiola@1864institute.org" class="foot-link">abiola@1864institute.org</a>
       </div>
     </div>
     <div class="foot-bottom">
@@ -173,6 +174,6 @@ footer{background:var(--dark);padding:clamp(52px,7vw,80px) 0 24px;border-top:1px
     </div>
   </div>
 </footer>
-<script>var ro=new IntersectionObserver(function(es){es.forEach(function(e){if(!e.isIntersecting)return;e.target.classList.add('in');ro.unobserve(e.target);});},{threshold:.07});document.querySelectorAll('.rv,.rv2').forEach(function(el){ro.observe(el)});</script>
+<script>var ro=new IntersectionObserver(function(es){es.forEach(function(e){if(!e.isIntersecting)return;e.target.classList.add('in');ro.unobserve(e.target);});},{threshold:.07});document.querySelectorAll('.rv').forEach(function(el){ro.observe(el)});</script>
 </body>
 </html>
