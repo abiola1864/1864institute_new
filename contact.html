@@ -72,6 +72,17 @@ footer{background:var(--dark);padding:clamp(52px,7vw,80px) 0 24px;border-top:1px
 .look-card h3{font-size:1.02rem;font-weight:700;color:var(--ink);margin-bottom:10px}
 .look-card p{font-size:.88rem;color:var(--mid);line-height:1.8;margin-bottom:14px}
 .look-more{font-family:'Montserrat',sans-serif;font-size:.72rem;font-weight:600;color:var(--blue)}
+.role-list{display:flex;flex-direction:column;gap:16px}
+.role-card{border:1px solid #E4E8EF;border-radius:12px;padding:clamp(22px,3vw,30px);background:#fff;
+  transition:box-shadow .2s,border-color .2s;display:block}
+.role-card:hover{box-shadow:0 10px 30px rgba(13,22,39,.08);border-color:#d7deea}
+.role-card h3{font-size:clamp(1.1rem,2.3vw,1.35rem);font-weight:800;color:var(--ink);margin-bottom:11px;letter-spacing:-.01em}
+.role-meta{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:13px}
+.chip{font-family:'Montserrat',sans-serif;font-size:.62rem;font-weight:700;letter-spacing:.05em;
+  text-transform:uppercase;padding:5px 11px;border-radius:100px;background:var(--gray);color:var(--mid)}
+.role-card p{font-size:.88rem;color:var(--mid);line-height:1.8;margin-bottom:14px;max-width:720px}
+.role-more{font-family:'Montserrat',sans-serif;font-size:.74rem;font-weight:600;color:var(--blue)}
+.role-card:hover .role-more{color:var(--gold-dark)}
 </style>
 </head>
 <body>
@@ -126,7 +137,7 @@ footer{background:var(--dark);padding:clamp(52px,7vw,80px) 0 24px;border-top:1px
       <p class="label" style="color:var(--blue)">Who we work with</p>
       <h2>We are looking for</h2>
     </div>
-    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px" class="g3 rv">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px" class="g2 rv">
       <div class="look-card">
         <div class="look-bar" style="background:var(--gold)"></div>
         <h3>Government partner institutions</h3>
@@ -137,12 +148,39 @@ footer{background:var(--dark);padding:clamp(52px,7vw,80px) 0 24px;border-top:1px
         <h3>Funders</h3>
         <p>Aligned with building simple, evidence-based data capacity inside Nigerian public institutions.</p>
       </div>
-      <div class="look-card">
-        <div class="look-bar" style="background:var(--blue-mid)"></div>
-        <h3>People to work with us</h3>
-        <p>We have open roles right now. See the current positions and how to apply.</p>
-        <a href="jobs.html" class="look-more">View open roles →</a>
-      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-white">
+  <div class="wrap">
+    <div class="section-head rv">
+      <p class="label" style="color:var(--blue)">Join the team</p>
+      <h2>Open roles</h2>
+    </div>
+    <div class="role-list rv">
+      <a href="jobs/research-government-engagement-consultant.html" class="role-card">
+        <h3>Research and Government Engagement Consultant</h3>
+        <div class="role-meta">
+          <span class="chip">Abuja, Nigeria</span>
+          <span class="chip">3-month consultancy</span>
+          <span class="chip">Starts late Sept 2026</span>
+          <span class="chip">N800,000 – N1,200,000</span>
+        </div>
+        <p>Lead the desk research, use case development, and early government engagement for a set of data-for-development and AI-for-government innovations 1864 is scoping for Nigeria.</p>
+        <span class="role-more">View role and apply →</span>
+      </a>
+      <a href="jobs/research-associate.html" class="role-card">
+        <h3>Research Associate</h3>
+        <div class="role-meta">
+          <span class="chip">Remote / Abuja</span>
+          <span class="chip">6-month contract</span>
+          <span class="chip">Starts July 2026</span>
+          <span class="chip">N200,000 – N250,000/month</span>
+        </div>
+        <p>Support our first institutional engagement across research, communications, and project coordination, with direct exposure to high-level institutional work from day one.</p>
+        <span class="role-more">View role and apply →</span>
+      </a>
     </div>
   </div>
 </section>
