@@ -80,6 +80,35 @@ footer{background:var(--dark);padding:clamp(52px,7vw,80px) 0 24px;border-top:1px
 .section-head{margin-bottom:48px}
 .section-head .label{margin-bottom:12px}
 .section-head h2{font-size:clamp(1.6rem,4vw,2.4rem);font-weight:800;letter-spacing:-.02em}
+
+/* Team faces + modal */
+.team-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px;margin-bottom:56px}
+@media(max-width:860px){.team-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.team-grid{grid-template-columns:1fr}}
+.face{position:relative;border-radius:14px;overflow:hidden;cursor:pointer;aspect-ratio:3/4;background:var(--gray);border:1px solid #E4E8EF}
+.face img{width:100%;height:100%;object-fit:cover;object-position:center 22%;filter:grayscale(1) contrast(1.02);transition:filter .5s ease,transform .6s ease;display:block}
+.face::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(17,28,51,.10) 0%,rgba(17,28,51,0) 30%,rgba(13,22,39,.85) 100%);transition:opacity .5s}
+.face .fmeta{position:absolute;left:0;right:0;bottom:0;z-index:2;padding:20px}
+.face .fmeta h3{color:#fff;font-size:1.02rem;font-weight:800;margin-bottom:3px;letter-spacing:-.01em}
+.face .fmeta p{font-family:'Montserrat',sans-serif;font-size:.54rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--gold)}
+.face .fhint{position:absolute;top:13px;right:13px;z-index:2;width:30px;height:30px;border-radius:50%;background:rgba(255,255,255,.16);backdrop-filter:blur(6px);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:600;transition:background .3s,color .3s}
+.face:hover img,.face:focus img{filter:grayscale(0) contrast(1);transform:scale(1.045)}
+.face:hover .fhint,.face:focus .fhint{background:var(--gold);color:var(--navy)}
+.face:focus{outline:2px solid var(--gold);outline-offset:2px}
+.tmodal{position:fixed;inset:0;z-index:1000;display:none;align-items:center;justify-content:center;padding:24px}
+.tmodal.open{display:flex}
+.tmodal-bg{position:absolute;inset:0;background:rgba(13,22,39,.72);backdrop-filter:blur(4px)}
+.tmodal-panel{position:relative;z-index:2;background:#fff;border-radius:16px;max-width:560px;width:100%;max-height:88vh;overflow:auto;padding:clamp(24px,4vw,36px)}
+.tmodal-close{position:absolute;top:10px;right:14px;background:none;border:none;font-size:1.9rem;line-height:1;color:var(--muted);cursor:pointer}
+.tmodal-close:hover{color:var(--ink)}
+.tmodal-head{display:flex;gap:18px;align-items:center;margin-bottom:18px}
+.tmodal-head .tm-img{width:88px;height:88px;border-radius:12px;object-fit:cover;object-position:center 22%;flex-shrink:0}
+.tmodal-head h3{font-size:1.25rem;font-weight:800;color:var(--ink);margin-bottom:4px}
+.tmodal-head .tm-role{font-family:'Montserrat',sans-serif;font-size:.58rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--blue);margin-bottom:8px}
+.tm-li{display:inline-flex;width:30px;height:30px;background:var(--navy);border-radius:6px;align-items:center;justify-content:center;color:rgba(255,255,255,.7);transition:background .2s}
+.tm-li:hover{background:var(--blue)}
+.tm-bio p{font-size:.92rem;color:var(--mid);line-height:1.85;margin-bottom:14px}
+.tm-bio p.muted{font-size:.82rem;color:var(--muted);line-height:1.7}
 </style>
 </head>
 <body>
@@ -88,16 +117,16 @@ footer{background:var(--dark);padding:clamp(52px,7vw,80px) 0 24px;border-top:1px
     <img src="images/logo_transparent.png" alt="1864" style="height:38px;width:auto">
     <span style="font-family:'Montserrat',sans-serif;font-size:.72rem;font-weight:700;color:rgba(255,255,255,.7);line-height:1.25;letter-spacing:.01em">The 1864 Research<br>&amp; Innovation Institute</span>
   </a>
-  <div class="nav-links"><a href="index.html" >Home</a><a href="about.html" >About</a><a href="approach.html" >Our Approach</a><a href="projects.html" >Projects</a><a href="insights.html" >Insights</a><a href="team.html" class='on'>Team</a><a href="contact.html" class="nav-cta">Work With Us</a></div>
+  <div class="nav-links"><a href="index.html" >Home</a><a href="about.html" >About</a><a href="approach.html" >Our Approach</a><a href="projects.html" >Projects</a><a href="insights.html" >Insights</a><a href="https://www.linkedin.com/in/iamakinoyekunle" target="_blank" rel="noopener" class='on'>Team</a><a href="contact.html" class="nav-cta">Work With Us</a></div>
   <div id="burger" onclick="document.getElementById('mob').classList.toggle('open')"><span></span><span></span><span></span></div>
 </nav>
 <div id="mob"><a href="index.html">Home</a>
-    <a href="about.html">About</a><a href="approach.html">Our Approach</a><a href="projects.html">Projects</a><a href="insights.html">Insights</a><a href="team.html">Team</a><a href="contact.html">Work With Us</a></div>
+    <a href="about.html">About</a><a href="approach.html">Our Approach</a><a href="projects.html">Projects</a><a href="insights.html">Insights</a><a href="https://www.linkedin.com/in/iamakinoyekunle" target="_blank" rel="noopener">Team</a><a href="contact.html">Work With Us</a></div>
 <script>window.addEventListener('scroll',function(){document.getElementById('nav').classList.toggle('sc',scrollY>50)});document.getElementById('nav').classList.toggle('sc',scrollY>50)</script>
 
 <section class="page-hero">
   <div class="wrap rv"><div class="ph-rule"></div>
-    <p class="ph-label">The Board</p>
+    <p class="ph-label">The Team</p>
     <h1 class="ph-h1">The people who build<br><em>with government workers.</em></h1>
     <p class="ph-sub">Research rigour. M&amp;E expertise. Institutional access. The exact combination needed to build data tools that actually work inside Nigerian public institutions.</p>
   </div>
@@ -106,52 +135,28 @@ footer{background:var(--dark);padding:clamp(52px,7vw,80px) 0 24px;border-top:1px
 <section class="section-white">
   <div class="wrap">
 
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-bottom:56px" class="g3 rv">
+    <div class="team-grid rv">
 
-      <!-- Abiola -->
-      <div style="border:1px solid #E4E8EF;border-radius:12px;overflow:hidden;transition:box-shadow .25s" onmouseover="this.style.boxShadow='0 8px 32px rgba(13,22,39,.1)'" onmouseout="this.style.boxShadow='none'">
-        <div style="aspect-ratio:4/3;overflow:hidden;background:var(--gray)">
-          <img src="images/abiola.jpg" alt="Abiola Oyebanjo" style="width:100%;height:100%;object-fit:cover;object-position:top center">
-        </div>
-        <div style="padding:24px 24px 28px">
-          <div style="display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:12px">
-            <div>
-              <h3 style="font-family:'Montserrat',sans-serif;font-size:1rem;font-weight:800;color:var(--ink);margin-bottom:3px">Abiola Oyebanjo</h3>
-              <p style="font-family:'Montserrat',sans-serif;font-size:.58rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--blue)">Co-Founder &amp; Executive Director</p>
-            </div>
-            <a href="https://www.linkedin.com/in/oyebanjoabiola" target="_blank" rel="noopener" style="width:32px;height:32px;background:var(--navy);border-radius:6px;display:flex;align-items:center;justify-content:center;flex-shrink:0;color:rgba(255,255,255,.6);transition:background .2s" onmouseover="this.style.background='#2C4C8A'" onmouseout="this.style.background='var(--navy)'">
-              <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="currentColor" viewBox="0 0 448 512"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
-            </a>
-          </div>
-          <div style="width:28px;height:2px;background:var(--gold);margin-bottom:14px"></div>
-          <p style="font-size:.85rem;color:var(--mid);line-height:1.85;margin-bottom:14px">Abiola trained as a sociologist and earned his PhD, but what drives his work is a frustration: rigorous research circulates in academic networks and never reaches the institutions that could act on it. The 1864 Institute is his attempt to close that gap from the inside out.</p>
-          <p style="font-size:.85rem;color:var(--mid);line-height:1.85">His background spans research and applied development work in Nigeria, from field experiments with public institutions to co-founding organisations that put evidence into practice. He leads institutional strategy and government partnerships.</p>
-          <p style="font-size:.78rem;color:var(--muted);line-height:1.7;margin-top:14px">Abiola is an alumnus of Obafemi Awolowo University (OAU), the University of Ibadan (UI), and Humboldt University of Berlin.</p>
-        </div>
+      <div class="face" tabindex="0" role="button" aria-label="Abiola Oyebanjo, open bio" data-name="Abiola Oyebanjo" data-role="Co-Founder &amp; Executive Director" data-img="images/abiola.jpg" data-li="https://www.linkedin.com/in/oyebanjoabiola">
+        <img src="images/abiola.jpg" alt="Abiola Oyebanjo" style="object-position:center 28%">
+        <div class="fhint">+</div>
+        <div class="fmeta"><h3>Abiola Oyebanjo</h3><p>Co-Founder &amp; Executive Director</p></div>
+        <template class="bio"><p>Abiola trained as a sociologist and earned his PhD, but what drives his work is a frustration: rigorous research circulates in academic networks and never reaches the institutions that could act on it. The 1864 Institute is his attempt to close that gap from the inside out.</p><p>His background spans research and applied development work in Nigeria, from field experiments with public institutions to co-founding organisations that put evidence into practice. He leads institutional strategy and government partnerships, and is a postdoctoral researcher at the University of Münster.</p><p class="muted">Abiola is an alumnus of Obafemi Awolowo University (OAU), the University of Ibadan (UI), and Humboldt University of Berlin.</p></template>
       </div>
 
-      <!-- Nneka -->
-      <div style="border:1px solid #E4E8EF;border-radius:12px;overflow:hidden;transition:box-shadow .25s" onmouseover="this.style.boxShadow='0 8px 32px rgba(13,22,39,.1)'" onmouseout="this.style.boxShadow='none'">
-        <div style="aspect-ratio:4/3;overflow:hidden;background:var(--gray)">
-          <img src="images/nneka.jpg" alt="Nneka Osadolor" style="width:100%;height:100%;object-fit:cover;object-position:top center">
-        </div>
-        <div style="padding:24px 24px 28px">
-          <div style="display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:12px">
-            <div>
-              <h3 style="font-family:'Montserrat',sans-serif;font-size:1rem;font-weight:800;color:var(--ink);margin-bottom:3px">Nneka Osadolor</h3>
-              <p style="font-family:'Montserrat',sans-serif;font-size:.58rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--green)">Co-Founder &amp; Director of Research</p>
-            </div>
-            <a href="https://www.linkedin.com/in/nneka-esther-osadolor-phd-86201655/" target="_blank" rel="noopener" style="width:32px;height:32px;background:var(--navy);border-radius:6px;display:flex;align-items:center;justify-content:center;flex-shrink:0;color:rgba(255,255,255,.6);transition:background .2s" onmouseover="this.style.background='#059669'" onmouseout="this.style.background='var(--navy)'">
-              <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="currentColor" viewBox="0 0 448 512"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
-            </a>
-          </div>
-          <div style="width:28px;height:2px;background:var(--green);margin-bottom:14px"></div>
-          <p style="font-size:.85rem;color:var(--mid);line-height:1.85;margin-bottom:14px">Nneka believes good evidence should be uncomfortable to ignore. Her doctorate is in economics, and her research on gender, institutions, and development in Africa is rigorous enough to hold up to scrutiny and grounded enough to land with decision-makers.</p>
-          <p style="font-size:.85rem;color:var(--mid);line-height:1.85">She is the methodological backbone of the Institute. Every tool we build, every finding we publish, every claim we make passes through her. She sets the bar and keeps it there.</p>
-          <p style="font-size:.78rem;color:var(--muted);line-height:1.7;margin-top:14px">Nneka earned a first-class degree at the University of Benin (UNIBEN) and a master's with distinction at the University of Ibadan (UI).</p>
-        </div>
+      <div class="face" tabindex="0" role="button" aria-label="Nneka Osadolor, open bio" data-name="Nneka Osadolor" data-role="Co-Founder &amp; Director of Research" data-img="images/nneka.jpg" data-li="https://www.linkedin.com/in/nneka-esther-osadolor-phd-86201655/">
+        <img src="images/nneka.jpg" alt="Nneka Osadolor" style="object-position:center 22%">
+        <div class="fhint">+</div>
+        <div class="fmeta"><h3>Nneka Osadolor</h3><p>Co-Founder &amp; Director of Research</p></div>
+        <template class="bio"><p>Nneka believes good evidence should be uncomfortable to ignore. Her doctorate is in economics, and her research on gender, institutions, and development in Africa is rigorous enough to hold up to scrutiny and grounded enough to land with decision-makers.</p><p>She is the methodological backbone of the Institute. Every tool we build, every finding we publish, every claim we make passes through her. She sets the bar and keeps it there. She is also a Consultant Economist with the World Bank Nigeria Gender Innovation Lab.</p><p class="muted">Nneka earned a first-class degree at the University of Benin (UNIBEN) and a master's with distinction at the University of Ibadan (UI).</p></template>
       </div>
 
+      <div class="face" tabindex="0" role="button" aria-label="Gershinen Shanding, open bio" data-name="Gershinen Shanding" data-role="Research and Government Engagement Consultant" data-img="images/gershinen.webp" data-li="https://www.linkedin.com/in/pgshanding">
+        <img src="images/gershinen.webp" alt="Gershinen Shanding" style="object-position:center 22%">
+        <div class="fhint">+</div>
+        <div class="fmeta"><h3>Gershinen Shanding</h3><p>Research and Government Engagement Consultant</p></div>
+        <template class="bio"><p>Gershinen is a data scientist who writes for people outside data science. Across five years in public health, economics, and applied artificial intelligence, he has built predictive models and machine learning systems and turned technical findings into recommendations that policy and non-technical audiences can use.</p><p>At 1864 he scopes AI and data tools for government, identifies partner agencies, and moves the pipeline from first meeting to formal agreement.</p><p class="muted">Gershinen holds a bachelor's in computer science from the University of Jos, and is completing a master's in data science at the Nigerian Defence Academy and a postgraduate diploma in economics at the National Open University of Nigeria.</p></template>
+      </div>
     </div>
 
     <div style="background:var(--gray);border-radius:12px;padding:28px 32px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:20px" class="rv">
@@ -164,6 +169,21 @@ footer{background:var(--dark);padding:clamp(52px,7vw,80px) 0 24px;border-top:1px
 
   </div>
 </section>
+<div class="tmodal" id="tmodal" aria-hidden="true">
+  <div class="tmodal-bg"></div>
+  <div class="tmodal-panel" role="dialog" aria-modal="true">
+    <button class="tmodal-close" aria-label="Close">&times;</button>
+    <div class="tmodal-head">
+      <img class="tm-img" src="" alt="">
+      <div>
+        <h3 class="tm-name"></h3>
+        <p class="tm-role"></p>
+        <a class="tm-li" href="#" target="_blank" rel="noopener" aria-label="LinkedIn"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="currentColor" viewBox="0 0 448 512"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg></a>
+      </div>
+    </div>
+    <div class="tm-bio"></div>
+  </div>
+</div>
 <footer>
   <div class="wrap">
     <div class="foot-grid">
@@ -178,7 +198,7 @@ footer{background:var(--dark);padding:clamp(52px,7vw,80px) 0 24px;border-top:1px
         <a href="approach.html" class="foot-link">Our Approach</a>
         <a href="projects.html" class="foot-link">Projects</a>
         <a href="insights.html" class="foot-link">Insights</a>
-        <a href="team.html" class="foot-link">Team</a>
+        <a href="https://www.linkedin.com/in/iamakinoyekunle" target="_blank" rel="noopener" class="foot-link">Team</a>
       </div>
       <div>
         <p class="foot-hl">Contact</p>
@@ -192,5 +212,28 @@ footer{background:var(--dark);padding:clamp(52px,7vw,80px) 0 24px;border-top:1px
   </div>
 </footer>
 <script>var ro=new IntersectionObserver(function(es){es.forEach(function(e){if(!e.isIntersecting)return;e.target.classList.add('in');ro.unobserve(e.target);});},{threshold:.07});document.querySelectorAll('.rv,.rv2').forEach(function(el){ro.observe(el)});</script>
+<script>
+(function(){
+  var modal=document.getElementById('tmodal'); if(!modal) return;
+  function openFace(f){
+    modal.querySelector('.tm-img').src=f.getAttribute('data-img');
+    modal.querySelector('.tm-img').alt=f.getAttribute('data-name');
+    modal.querySelector('.tm-name').textContent=f.getAttribute('data-name');
+    modal.querySelector('.tm-role').textContent=f.getAttribute('data-role');
+    modal.querySelector('.tm-bio').innerHTML=f.querySelector('template.bio').innerHTML;
+    var li=modal.querySelector('.tm-li'), url=f.getAttribute('data-li');
+    if(url){li.href=url;li.style.display='inline-flex';}else{li.style.display='none';}
+    modal.classList.add('open'); document.body.style.overflow='hidden';
+  }
+  function close(){ modal.classList.remove('open'); document.body.style.overflow=''; }
+  document.querySelectorAll('.face').forEach(function(f){
+    f.addEventListener('click',function(){openFace(f);});
+    f.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();openFace(f);}});
+  });
+  modal.querySelector('.tmodal-bg').addEventListener('click',close);
+  modal.querySelector('.tmodal-close').addEventListener('click',close);
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')close();});
+})();
+</script>
 </body>
 </html>
