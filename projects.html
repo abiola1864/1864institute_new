@@ -87,6 +87,15 @@ footer{background:var(--dark);padding:clamp(52px,7vw,80px) 0 24px;border-top:1px
 .focus-card p{font-size:.86rem;color:var(--mid);line-height:1.8}
 .focus-tag{font-family:'Montserrat',sans-serif;font-size:.58rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:12px}
 @media(max-width:640px){.focus-grid{grid-template-columns:1fr}}
+
+.timeline{position:relative;display:grid;grid-template-columns:repeat(3,1fr)}
+.timeline::before{content:"";position:absolute;top:7px;left:14%;right:14%;height:2px;background:#E4E8EF;z-index:1}
+.tl-step{position:relative;z-index:2;text-align:center;padding:0 14px}
+.tl-dot{width:15px;height:15px;border-radius:50%;margin:0 auto 16px}
+.tl-stage{font-family:'Montserrat',sans-serif;font-size:.56rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:5px}
+.tl-date{font-family:'Montserrat',sans-serif;font-size:.98rem;font-weight:800;color:var(--ink);margin-bottom:7px;letter-spacing:-.01em}
+.tl-label{font-size:.82rem;color:var(--mid);line-height:1.65;max-width:260px;margin-inline:auto}
+@media(max-width:600px){.timeline{grid-template-columns:1fr;row-gap:26px}.timeline::before{top:4px;bottom:4px;left:7px;right:auto;width:2px;height:auto}.tl-step{text-align:left;padding:0 0 0 30px}.tl-dot{position:absolute;left:0;top:3px;margin:0}.tl-label{margin-inline:0}}
 </style>
 </head>
 <body>
@@ -105,8 +114,8 @@ footer{background:var(--dark);padding:clamp(52px,7vw,80px) 0 24px;border-top:1px
 <section class="page-hero">
   <div class="wrap rv"><div class="ph-rule"></div>
     <p class="ph-label">Our Work</p>
-    <h1 class="ph-h1">Four focus areas.<br>One proof of concept<br><em>at a time.</em></h1>
-    <p class="ph-sub">We work across crime and public safety, gender, social protection, and education. We are in our founding phase, scoping our first institutional engagement. One well-documented proof of concept that demonstrates impact creates the evidence base for everything that follows.</p>
+    <h1 class="ph-h1">Building data tools<br><em>inside government.</em></h1>
+    <p class="ph-sub">We build two things that work together, 1864 Prep and the Open Network, and we are putting them to use first in social protection in Kaduna State.</p>
   </div>
 </section>
 
@@ -114,11 +123,12 @@ footer{background:var(--dark);padding:clamp(52px,7vw,80px) 0 24px;border-top:1px
   <div class="wrap">
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start" class="g2 rv">
       <div>
-        <p class="label" style="color:var(--blue);margin-bottom:12px">First Engagement</p>
-        <h2 style="font-size:clamp(1.5rem,3.5vw,2.2rem);font-weight:800;color:var(--ink);margin-bottom:16px;letter-spacing:-.02em">Crime and public safety data systems</h2>
-        <p style="font-size:.92rem;color:var(--mid);line-height:1.9;margin-bottom:14px">We are scoping our first engagement with a Nigerian security institution. The goal: build simple data tools that get crime evidence from the officer on the ground to the commander making patrol decisions.</p>
-        <p style="font-size:.92rem;color:var(--mid);line-height:1.9;margin-bottom:24px">Built with frontline officers. Using familiar tools. Run by internal champions after we leave.</p>
-        <a href="blog/why-crime-and-violence.html" style="font-family:'Montserrat',sans-serif;font-size:.75rem;font-weight:600;color:var(--blue)">Why this focus area →</a>
+        <p class="label" style="color:var(--blue);margin-bottom:12px">Project</p>
+        <h2 style="font-size:clamp(1.5rem,3.5vw,2.2rem);font-weight:800;color:var(--ink);margin-bottom:8px;letter-spacing:-.02em">Support that reaches the right people</h2>
+        <p style="font-family:'Montserrat',sans-serif;font-size:.68rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:16px">Social protection pilot &middot; Kaduna State</p>
+        <p style="font-size:.92rem;color:var(--mid);line-height:1.9;margin-bottom:14px">Our first proof of concept is under way with government partners in Kaduna State, applying this to social protection: confirming who qualifies for support, cutting duplication, and reaching more of the right people.</p>
+        <p style="font-size:.92rem;color:var(--mid);line-height:1.9;margin-bottom:24px">This is a pilot in one state. We aim to complete it by the middle of 2027, then build toward a national rollout.</p>
+        <a href="blog/kaduna-social-protection.html" style="font-family:'Montserrat',sans-serif;font-size:.75rem;font-weight:600;color:var(--blue)">Where this work stands →</a>
       </div>
       <div style="background:var(--gray);border-radius:12px;padding:32px 28px">
         <p class="label" style="color:var(--mid);margin-bottom:20px">Every project we do</p>
@@ -141,10 +151,56 @@ footer{background:var(--dark);padding:clamp(52px,7vw,80px) 0 24px;border-top:1px
         </div>
       </div>
     </div>
+    <div class="rv" style="margin-top:48px">
+      <p class="label" style="color:var(--blue);margin-bottom:24px">Timeline</p>
+      <div class="timeline">
+        <div class="tl-step">
+          <div class="tl-dot" style="background:var(--gold)"></div>
+          <p class="tl-stage">Now</p>
+          <p class="tl-date">2026</p>
+          <p class="tl-label">Pilot under way in Kaduna State. The approach runs end to end, with first agreements in place.</p>
+        </div>
+        <div class="tl-step">
+          <div class="tl-dot" style="background:var(--green)"></div>
+          <p class="tl-stage">Next</p>
+          <p class="tl-date">Mid 2027</p>
+          <p class="tl-label">Complete the Kaduna pilot and measure what a verified, coordinated system delivers.</p>
+        </div>
+        <div class="tl-step">
+          <div class="tl-dot" style="background:var(--blue)"></div>
+          <p class="tl-stage">Then</p>
+          <p class="tl-date">Beyond 2027</p>
+          <p class="tl-label">Build toward a national rollout, extending the approach to more states.</p>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
 <section class="section-gray">
+  <div class="wrap">
+    <div class="section-head rv">
+      <p class="label" style="color:var(--blue)">Our inventions</p>
+      <h2>The tools behind the work.</h2>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px" class="focus-grid rv">
+      <div class="focus-card">
+        <div class="focus-bar" style="background:var(--green)"></div>
+        <p class="focus-tag">The tool</p>
+        <h3>1864 Prep</h3>
+        <p>A simple tool that helps an agency clean and standardise its own records, on its own computer, so the data is finally usable. The data never leaves the agency.</p>
+      </div>
+      <div class="focus-card">
+        <div class="focus-bar" style="background:var(--blue)"></div>
+        <p class="focus-tag">The network</p>
+        <h3>The Open Network</h3>
+        <p>A way for agencies to answer each other's questions about a case without pooling or handing over data. The data stays where it lives. Only a verified answer travels.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-white">
   <div class="wrap">
     <div class="section-head rv">
       <p class="label" style="color:var(--blue)">Where we work</p>
